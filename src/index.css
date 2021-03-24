@@ -11,3 +11,49 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* for react elastic carousel */
+
+button.rec-dot{
+  margin: 0px 10px;
+  background-color: transparent;
+  box-shadow: 0 0 1px 3px #1de9b6;
+}
+
+button.rec-dot_active{
+  background-color: #1de9b648;
+}
+
+button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
+  background-color: #1de9b648;
+  box-shadow: 0 0 1px 3px #1de9b6;
+}
+
+
+
+button.rec-arrow{
+  background-color: #1de9b648;
+}
+
+button.rec-arrow{
+  background-color: #1de9b648;
+}
+
+.rec.rec-arrow{
+  color: #fff;
+  box-shadow: #1de9b648;
+  border: none;
+  background-color: #1de9b648;
+  font-size: 2em;
+  border-radius: 5px;
+}
+
+.rec.rec-arrow:focus:enabled, .rec.rec-arrow:hover:enabled{
+  background-color: #1de9b648;
+}
+
+.rec.rec-arrow:disabled{
+  color: rgba(255, 255, 255, 0.123);
+  background-color: rgba(255, 255, 255, 0.123);
+}
+

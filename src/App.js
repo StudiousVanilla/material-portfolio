@@ -1,6 +1,6 @@
-import ResponsiveDrawer from './components/ResponsiveDrawer'
-import {createMuiTheme, ThemeProvider} from '@material-ui/core'
-import {deepOrange, teal } from '@material-ui/core/colors';
+import ResponsiveDrawer from './components/ResponsiveDrawer';
+import {createMuiTheme, ThemeProvider} from '@material-ui/core';
+import {deepOrange } from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
   palette: {
@@ -8,7 +8,9 @@ const theme = createMuiTheme({
     primary: {
       main: '#9d46ff'
     },
-    secondary: teal,
+    secondary:{
+      main:'#1de9b6',
+    }, 
     info: deepOrange
   }
 })

@@ -19,10 +19,9 @@ const useStyles = makeStyles((theme) => ({
     },
     card: {
         borderRadius: 20,
-        border: 'transparent',
+        border: '5px solid transparent',
         '&:hover': {
-            borderStyle: 'solid',
-            borderWidth: '5px'
+            border: '5px solid'
         },
     },
     cardContent: {
@@ -42,16 +41,13 @@ const useStyles = makeStyles((theme) => ({
         fontSize: 80
     },
     primary:{
-        color: theme.palette.primary.main,
-        borderColor: theme.palette.primary.main
+        color: theme.palette.primary.main
     },
     secondary:{
-        color: theme.palette.secondary.main,
-        borderColor: theme.palette.secondary.main
+        color: theme.palette.secondary.main
     },
     tertiary: {
-        color: theme.palette.info.main,
-        borderColor: theme.palette.info.main
+        color: theme.palette.info.main
     }
 }));
 
@@ -64,7 +60,9 @@ const About = () => {
             <Grid container spacing={4}>
                 <Grid item xs={12} s={12} md={12} lg={4}
                     className={classes.aboutItems}>
-                    <Card className={clsx(classes.card, classes.primary)}>
+                    <Card 
+                    className={clsx(classes.card, classes.primary)}
+                    elevation={6}>
                         <Container className={classes.cardContent}>
                             <Typography className={classes.cardText}>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis saepe voluptatibus sint adipisci ipsa nulla ex eum molestiae, eveniet sunt eaque.
@@ -81,7 +79,9 @@ const About = () => {
                 </Grid>
                 <Grid item xs={12} s={12} md={12} lg={4}
                     className={classes.aboutItems}>
-                    <Card className={clsx(classes.card, classes.secondary)}>
+                    <Card 
+                    className={clsx(classes.card, classes.secondary)}
+                    elevation={6}>
                         <Container className={classes.cardContent}>
                             <Typography className={classes.cardText}>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis saepe voluptatibus sint adipisci ipsa nulla ex eum molestiae, eveniet sunt eaque.
@@ -96,7 +96,8 @@ const About = () => {
                 </Grid>
                 <Grid item xs={12} s={12} md={12} lg={4}
                     className={classes.aboutItems}>
-                    <Card className={clsx(classes.card, classes.tertiary)}>
+                    <Card className={clsx(classes.card, classes.tertiary)}
+                    elevation={6}>
                         <Container className={classes.cardContent}>
                             <Typography className={classes.cardText}>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis saepe voluptatibus sint adipisci ipsa nulla ex eum molestiae, eveniet sunt eaque.
