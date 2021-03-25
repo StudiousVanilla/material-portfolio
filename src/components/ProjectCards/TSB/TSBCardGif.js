@@ -1,6 +1,6 @@
 import { Accordion, AccordionSummary, AccordionDetails, Box, Container, IconButton, makeStyles, Typography } from "@material-ui/core";
 import clsx from 'clsx'
-import tsbGif from './tsbgif.gif'
+import tsbGif from './tsbGif.gif'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import TSBstack from './TSBstack'
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -20,6 +20,8 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 20
     },
     boxRight:{
+        paddingTop: 75,
+        paddingBottom: 0,
         justifyContent: 'space-between',   
         marginRight: 0,
     },
@@ -40,12 +42,14 @@ const useStyles = makeStyles((theme) => ({
     },
     cardImg:{
         width: 500,
-        height: 250
+        height: 275,
+        border: `2px solid black`
     },
     accordian:{
         width: '80%',
         marginTop: 20,
-        borderTop: `1px solid #424242`,
+        boxShadow: 'none',
+        border: `1px solid #424242`,
         '&:before': {
             display: 'none',
         }
@@ -58,17 +62,19 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingBottom: 0
     },
     linksBox:{
         width: '65%',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        marginBottom: 9,
+        margin: 2,
         borderTop: `1px dotted ${theme.palette.secondary.main}`
     },
     iconBtn:{
+        paddingTop: 2,
         borderBottom:  `1px solid #424242`,
         borderRadius: 0,
         '&:hover':{
@@ -78,9 +84,9 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     linkIcons:{
-        marginTop: 15,
-        paddingBottom: 10,
-        fontSize: 50,
+        marginTop: 5,
+        paddingBottom: 5,
+        fontSize: 45,
         backgroundColor: 'transparent',
     }
 }));

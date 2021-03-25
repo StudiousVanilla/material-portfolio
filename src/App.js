@@ -14,6 +14,7 @@ const theme = createMuiTheme({
     info: deepOrange
   },
   typography: {
+    
     h1:{
       fontSize: 50
     }
