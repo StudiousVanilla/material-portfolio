@@ -2,8 +2,10 @@ import { Box, makeStyles } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import Card from '@material-ui/core/Card';
 import Carousel from 'react-elastic-carousel';
-import TSBCard from './ProjectCards/TSBCard';
-import NewsCard from './ProjectCards/NewsCard';
+import TSBCard from './ProjectCards/TSB/TSBCard';
+import TSBCardAlt from './ProjectCards/TSB/TSBCardAlt';
+import TSBCardAltNavy from './ProjectCards/TSB/TSBCardAltNavy';
+import TSBCardGif from './ProjectCards/TSB/TSBCardGif';
 
 const useStyles = makeStyles((theme) => ({
     carouselItems: {
@@ -43,12 +45,17 @@ const Projects = () => {
                     </div>
                     <div className={classes.carouselItems}>
                         <Card className={classes.card}>
-                            <NewsCard/>
+                            <TSBCardGif/>
                         </Card>
                     </div>
                     <div className={classes.carouselItems}>
                         <Card className={classes.card}>
-                            3
+                           <TSBCardAlt/>
+                        </Card>
+                    </div>
+                    <div className={classes.carouselItems}>
+                        <Card className={classes.card}>
+                            <TSBCardAltNavy/>
                         </Card>
                     </div>
                 </Carousel>

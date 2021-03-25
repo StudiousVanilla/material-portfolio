@@ -1,7 +1,8 @@
 import { Accordion, AccordionSummary, AccordionDetails, Box, Container, IconButton, makeStyles, Typography } from "@material-ui/core";
 import clsx from 'clsx'
-import news from './cardImgs/news.jpg'
+import tsbImg from './tsbImg.png'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import TSBstack from './TSBstack'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ComputerTwoToneIcon from '@material-ui/icons/ComputerTwoTone';
 
@@ -19,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
         marginRight: 20
     },
     boxRight:{
+        justifyContent: 'space-between',   
         marginRight: 0,
-        justifyContent: 'space-between'   
     },
     boxItem:{
         marginBottom: 20,
@@ -34,21 +35,39 @@ const useStyles = makeStyles((theme) => ({
     imgAccordianContainer:{
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: 0
     },
     cardImg:{
         width: 500,
-        height: 300
+        height: 275,
+        border: `2px solid black`
     },
     accordian:{
         width: '80%',
-        marginTop: 10
+        marginTop: 20,
+        boxShadow: 'none',
+        border: `1px solid #424242`,
+        '&:before': {
+            display: 'none',
+        }
+    },
+    accordianSummary:{
+        boxShadow: 'none',
+        border: 'none'
+    },
+    accordianDetails:{
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
     linksBox:{
-        width: '60%',
+        width: '65%',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
+        marginBottom: 9,
         borderTop: `1px dotted ${theme.palette.secondary.main}`
     },
     iconBtn:{
@@ -68,7 +87,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-const NewsCard = () => {
+const TSBCard = () => {
 
     const classes = useStyles();
 
@@ -78,9 +97,15 @@ const NewsCard = () => {
                 <Typography 
                     variant ='h1'
                     className= {clsx(classes.boxItem, classes.title)}>
-                    The 404
+                    The Sounding Board
                 </Typography>
                 <Typography>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus placeat ex corrupti esse nihil molestiae maxime impedit, possimus voluptatum explicabo, vero fugit odio enim est quo, facilis id quia quasi.
+                    <br/> <br/>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ipsum nihil, est cumque doloremque blanditiis quaerat consequuntur vitae, reprehenderit quisquam facere asperiores dignissimos recusandae saepe doloribus? Iusto maiores magni consequatur.
+                    <br/><br/>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus placeat ex corrupti esse nihil molestiae maxime impedit, possimus voluptatum explicabo, vero fugit odio enim est quo, facilis id quia quasi.
+                    <br/>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus placeat ex corrupti esse nihil molestiae maxime impedit, possimus voluptatum explicabo, vero fugit odio enim est quo, facilis id quia quasi.
                     <br/> <br/>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ipsum nihil, est cumque doloremque blanditiis quaerat consequuntur vitae, reprehenderit quisquam facere asperiores dignissimos recusandae saepe doloribus? Iusto maiores magni consequatur.
@@ -90,22 +115,21 @@ const NewsCard = () => {
                 <Box className={clsx(
                     classes.boxItem, 
                     classes.imgAccordianContainer)}>
-                    <img src={news} alt="doggie"
+                    <img src={tsbImg} alt="doggie"
                     className={classes.cardImg}/>
                     <Accordion className={classes.accordian}>
                         <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
+                        className={classes.accordianSummary}
+                        expandIcon={<ExpandMoreIcon 
+                        style={{color:'#1de9b6'}}/>}
                         aria-controls="panel1a-content"
                         id="panel1a-header">
                             <Typography className={classes.heading}>
                                 Technology Stack
                             </Typography>
-                            </AccordionSummary>
-                            <AccordionDetails>
-                            <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                sit amet blandit leo lobortis eget. Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus expedita quae excepturi recusandae, incidunt id beatae fugiat aliquid. Cupiditate rem ex impedit saepe molestiae distinctio nesciunt aliquam minus optio corrupti! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique accusantium corporis culpa sequi aperiam laborum aliquid necessitatibus! Illum doloremque recusandae sequi, aliquam totam quod? Nihil voluptatem iure praesentium. Cumque, eligendi.
-                            </Typography>
+                        </AccordionSummary>
+                        <AccordionDetails className={classes.accordianDetails}>
+                            <TSBstack/> 
                         </AccordionDetails>
                     </Accordion>
                 </Box>
@@ -122,4 +146,4 @@ const NewsCard = () => {
      );
 }
  
-export default NewsCard;
+export default TSBCard;

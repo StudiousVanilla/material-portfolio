@@ -12,6 +12,11 @@ const theme = createMuiTheme({
       main:'#1de9b6',
     }, 
     info: deepOrange
+  },
+  typography: {
+    h1:{
+      fontSize: 50
+    }
   }
 })
 
