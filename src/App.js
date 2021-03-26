@@ -1,22 +1,26 @@
-import ResponsiveDrawer from './components/ResponsiveDrawer';
 import {createMuiTheme, ThemeProvider} from '@material-ui/core';
-import {deepOrange } from '@material-ui/core/colors';
+import Layout from './components/Layout';
 
 const theme = createMuiTheme({
   palette: {
     type: 'dark',
-    primary: {
-      main: '#9d46ff'
+    primary:{
+      main: '#ff5410'
     },
     secondary:{
-      main:'#1de9b6',
+      main: '#76ff03'
     }, 
-    info: deepOrange
+    info:{
+      main:'#d500f9'
+    }
   },
   typography: {
     
     h1:{
       fontSize: 50
+    },
+    h4:{
+      fontSize: 32
     }
   }
 })
@@ -25,7 +29,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <ResponsiveDrawer/>
+        <Layout/>
       </div>
     </ThemeProvider>
   );

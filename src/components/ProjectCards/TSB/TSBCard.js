@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
     },
     imgContainer: {
         width: 500,
-        height: 260,
+        height: 300,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -60,7 +60,9 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 20,
         marginTop: 20,
         padding:0,
-        border: `2px solid black`,
+        '&:hover':{
+            boxShadow: '1px 1px 10px black'
+        }, 
         '&:hover $cardImg':{
             display: 'none'
         },

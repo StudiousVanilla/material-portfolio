@@ -26,8 +26,13 @@ const useStlyes = makeStyles((theme)=>({
         alignItems: 'center',
       },
       stackIcon:{
-          width: '60%'
-      }
+        width: '60%',
+        '&:hover': {
+        transform: 'scale(1.1)',
+        animation: 'shake 6s',
+        animationIterationCount: 'infinite',
+        }
+    }
 }));
 
 
@@ -40,7 +45,7 @@ const TSBstack = () => {
             spacing={3}>
                 <Grid item className={classes.gridItem}
                  xs={12} s={12} md={12} lg={3}>
-                    <img src={html} alt="html"
+                    <img src={html} title="html" alt="html"
                     className={classes.stackIcon}/>
                 </Grid>
                 <Grid item className={classes.gridItem}

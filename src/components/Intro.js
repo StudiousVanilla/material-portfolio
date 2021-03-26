@@ -2,11 +2,14 @@ import clsx from 'clsx'
 import { Container, makeStyles, Typography } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
-import MenuBookIcon from '@material-ui/icons/MenuBook';
+import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 import PersonIcon from '@material-ui/icons/Person';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
 
 const useStyles = makeStyles((theme) => ({
+    container: {
+        marginTop: 100,
+    },
     aboutItems: {
         display: "flex",
         flexWrap: "wrap",
@@ -19,9 +22,9 @@ const useStyles = makeStyles((theme) => ({
     },
     card: {
         borderRadius: 20,
-        border: '5px solid transparent',
+        border: '3px solid transparent',
         '&:hover': {
-            border: '5px solid'
+            border: '3px solid'
         },
     },
     cardContent: {
@@ -56,12 +59,12 @@ const Intro = () => {
     const classes = useStyles();
 
     return (
-        <Container>
+        <Container className={classes.container}>
             <Grid container spacing={4}>
                 <Grid item xs={12} s={12} md={12} lg={4}
                     className={classes.aboutItems}>
                     <Card 
-                    className={clsx(classes.card, classes.primary)}
+                    className={clsx(classes.card, classes.tertiary)}
                     elevation={6}>
                         <Container className={classes.cardContent}>
                             <Typography className={classes.cardText}>
@@ -69,7 +72,7 @@ const Intro = () => {
                             </Typography>
                             <PersonIcon
                                 className={
-                                    clsx(classes.cardIcon, classes.primary)}
+                                    clsx(classes.cardIcon, classes.tertiary)}
                             />
                             <Typography className={classes.cardText}>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis saepe voluptatibus sint adipisci ipsa nulla ex eum molestiae, eveniet sunt eaque.
@@ -96,17 +99,14 @@ const Intro = () => {
                 </Grid>
                 <Grid item xs={12} s={12} md={12} lg={4}
                     className={classes.aboutItems}>
-                    <Card className={clsx(classes.card, classes.tertiary)}
+                    <Card className={clsx(classes.card, classes.primary)}
                     elevation={6}>
                         <Container className={classes.cardContent}>
                             <Typography className={classes.cardText}>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis saepe voluptatibus sint adipisci ipsa nulla ex eum molestiae, eveniet sunt eaque.
                             </Typography>
-                            <MenuBookIcon
-                                className={
-                                    clsx(classes.cardIcon, 
-                                    classes.tertiary)}
-                            />
+                            <PhoneAndroidIcon 
+                            className={clsx(classes.cardIcon, classes.primary)}/>
                             <Typography className={classes.cardText}>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis saepe voluptatibus sint adipisci ipsa nulla ex eum molestiae, eveniet sunt eaque.
                             </Typography>

@@ -3,9 +3,16 @@ import Container from '@material-ui/core/Container';
 import Card from '@material-ui/core/Card';
 import Carousel from 'react-elastic-carousel';
 import TSBCard from './ProjectCards/TSB/TSBCard';
-import TSBCardGif from './ProjectCards/TSB/TSBCardGif';
 
 const useStyles = makeStyles((theme) => ({
+    container:{
+        display: 'flex',
+        justifyContent: 'center',
+        marginBottom: 100
+    },
+    box:{
+        width: '100%'
+    },
     carouselItems: {
       display: "flex",
       flexWrap: "wrap",
@@ -18,13 +25,6 @@ const useStyles = makeStyles((theme) => ({
     card:{
         margin: '0px',
         borderRadius: 20
-    },
-    container:{
-        display: 'flex',
-        justifyContent: 'center'
-    },
-    box:{
-        width: '100%'
     }
 }));
 
@@ -43,7 +43,7 @@ const Projects = () => {
                     </div>
                     <div className={classes.carouselItems}>
                         <Card className={classes.card}>
-                            <TSBCardGif/>
+                           
                         </Card>
                     </div>
                 </Carousel>

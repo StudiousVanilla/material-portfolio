@@ -5,9 +5,9 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-import PhoneIcon from '@material-ui/icons/Phone';
+import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 import CodeIcon from '@material-ui/icons/Code';
-import SentimentSatisfiedAltIcon from '@material-ui/icons/SentimentSatisfiedAlt';
+import PersonIcon from '@material-ui/icons/Person';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -16,9 +16,6 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
-import Intro from './Intro'
-import About from './About'
-import Projects from './Projects'
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 
 
@@ -113,7 +110,7 @@ function ResponsiveDrawer(props) {
         {[{
           text: 'About', 
           link: 'about', 
-          icon: <SentimentSatisfiedAltIcon color="primary" />
+          icon: <PersonIcon className={classes.tertiary} />
         },
         {
           text: 'Projects',
@@ -123,24 +120,24 @@ function ResponsiveDrawer(props) {
         {
         text: 'Contact',
         link: 'contact',
-        icon: <PhoneIcon className={classes.tertiary}/>
+        icon: <PhoneAndroidIcon color="primary"/>
       }].map((object, index) => (
-
+        
+        <Link href={"#"+object.link} color="textPrimary">
           <ListItem 
             className={classes.sideList} 
             button 
             key={index} 
             onClick={autoCloseMobileDrawer}>
               {/* sets icons based on position in list */}
-            <ListItemIcon className={classes.sideButtons}>
-                {object.icon}
-            </ListItemIcon>
-            <ListItemText>
-              <Link href={"#"+object.link} color="textPrimary">
-                {object.text}
-              </Link>
-            </ListItemText>
-          </ListItem>
+              <ListItemIcon className={classes.sideButtons}>
+                  {object.icon}
+              </ListItemIcon>
+              <ListItemText>
+                  {object.text}
+              </ListItemText>
+            </ListItem>
+          </Link>
         ))}
       </List>
     </div>
@@ -199,16 +196,6 @@ function ResponsiveDrawer(props) {
       </nav>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Intro/>
-        <Link className={classes.link} id="about">
-            <About/>
-        </Link>
-        <Link className={classes.link} id="projects"> 
-          <Projects/>
-        </Link>
-        <Link className={classes.link} id="contact"> 
-          Contact
-        </Link>
       </main>
     </div>
   );
