@@ -1,66 +1,122 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import MobileStepper from '@material-ui/core/MobileStepper';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+import PropTypes from 'prop-types';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import clsx from 'clsx';
+import Stepper from '@material-ui/core/Stepper';
+import Step from '@material-ui/core/Step';
+import StepLabel from '@material-ui/core/StepLabel';
+import Check from '@material-ui/icons/Check';
+import StepConnector from '@material-ui/core/StepConnector';
 import Button from '@material-ui/core/Button';
-import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
-import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
+import Typography from '@material-ui/core/Typography';
 
-const tutorialSteps = [
-  {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
-    imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+const QontoConnector = withStyles({
+  alternativeLabel: {
+    top: 10,
+    left: 'calc(-50% + 16px)',
+    right: 'calc(50% + 16px)',
   },
-  {
-    label: 'Bird',
-    imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+  active: {
+    '& $line': {
+      borderColor: '#784af4',
+    },
   },
-  {
-    label: 'Bali, Indonesia',
-    imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250&q=80',
+  completed: {
+    '& $line': {
+      borderColor: '#784af4',
+    },
   },
-  {
-    label: 'NeONBRAND Digital Marketing, Las Vegas, United States',
-    imgPath:
-      'https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=400&h=250&q=60',
+  line: {
+    borderColor: '#eaeaf0',
+    borderTopWidth: 3,
+    borderRadius: 1,
   },
-  {
-    label: 'Goč, Serbia',
-    imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+})(StepConnector);
+
+const useQontoStepIconStyles = makeStyles({
+  root: {
+    color: '#eaeaf0',
+    display: 'flex',
+    height: 22,
+    alignItems: 'center',
   },
-];
+  active: {
+    color: '#784af4',
+  },
+  circle: {
+    width: 8,
+    height: 8,
+    borderRadius: '50%',
+    backgroundColor: 'currentColor',
+  },
+  completed: {
+    color: '#784af4',
+    zIndex: 1,
+    fontSize: 18,
+  },
+});
+
+function QontoStepIcon(props) {
+  const classes = useQontoStepIconStyles();
+  const { active, completed } = props;
+
+  return (
+    <div
+      className={clsx(classes.root, {
+        [classes.active]: active,
+      })}
+    >
+      {completed ? <Check className={classes.completed} /> : <div className={classes.circle} />}
+    </div>
+  );
+}
+
+QontoStepIcon.propTypes = {
+  /**
+   * Whether this step is active.
+   */
+  active: PropTypes.bool,
+  /**
+   * Mark the step as completed. Is passed to child components.
+   */
+  completed: PropTypes.bool,
+};
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 400,
-    flexGrow: 1,
-  },
-  header: {
-    display: 'flex',
-    alignItems: 'center',
-    height: 50,
-    paddingLeft: theme.spacing(4),
-    backgroundColor: theme.palette.background.default,
-  },
-  img: {
-    height: 255,
-    maxWidth: 400,
-    overflow: 'hidden',
-    display: 'block',
     width: '100%',
+  },
+  button: {
+    marginRight: theme.spacing(1),
+  },
+  instructions: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1),
   },
 }));
 
-export default function TextMobileStepper() {
+function getSteps() {
+  return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+}
+
+function getStepContent(step) {
+  switch (step) {
+    case 0:
+      return 'Select campaign settings...';
+    case 1:
+      return 'What is an ad group anyways?';
+    case 2:
+      return 'This is the bit I really care about!';
+    default:
+      return 'Unknown step';
+  }
+}
+
+export default function CustomizedSteppers() {
   const classes = useStyles();
-  const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = tutorialSteps.length;
+  const [activeStep, setActiveStep] = React.useState(1);
+  const steps = getSteps();
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -70,34 +126,51 @@ export default function TextMobileStepper() {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
+  const handleReset = () => {
+    setActiveStep(0);
+  };
+
   return (
     <div className={classes.root}>
-      <Paper square elevation={0} className={classes.header}>
-        <Typography>{tutorialSteps[activeStep].label}</Typography>
-      </Paper>
-      <img
-        className={classes.img}
-        src={tutorialSteps[activeStep].imgPath}
-        alt={tutorialSteps[activeStep].label}
-      />
-      <MobileStepper
-        steps={maxSteps}
-        position="static"
-        variant="text"
-        activeStep={activeStep}
-        nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === maxSteps - 1}>
-            Next
-            {theme.direction === 'rtl' ? <KeyboardArrowLeft /> : <KeyboardArrowRight />}
-          </Button>
-        }
-        backButton={
-          <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-            {theme.direction === 'rtl' ? <KeyboardArrowRight /> : <KeyboardArrowLeft />}
-            Back
-          </Button>
-        }
-      />
+      <Stepper alternativeLabel activeStep={activeStep} connector={<QontoConnector />}>
+        {steps.map((label) => (
+          <Step key={label}>
+            <StepLabel StepIconComponent={QontoStepIcon}>{label}</StepLabel>
+          </Step>
+        ))}
+      </Stepper>
+      <div>
+        {activeStep === steps.length ? (
+          <div>
+            <Typography className={classes.instructions}>
+              All steps completed - you&apos;re finished
+            </Typography>
+            <Button onClick={handleReset} className={classes.button}>
+              Reset
+            </Button>
+          </div>
+        ) : (
+          <div>
+            <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+            <div>
+              <Button disabled={activeStep === 0} onClick={handleBack} className={classes.button}>
+                Back
+              </Button>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={handleNext}
+                className={classes.button}>
+                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+              </Button>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
+
+
+
+// try figure out how to cahnge the desgin of the stepper (1-2-3) to make it purple etc

@@ -35,6 +35,7 @@ const Layout = () => {
                 <Intro/>
                 <Link className={classes.link} id="about">
                     <About/>
+                    <Test/>
                 </Link>
                 <Link className={classes.link} id="projects"> 
                     <Projects/>
@@ -42,7 +43,6 @@ const Layout = () => {
                 <Link className={classes.link} id="contact"> 
                     <Contact/>
                 </Link>
-                <Test/>
             </Box>
         </div>
      );
