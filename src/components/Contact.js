@@ -32,6 +32,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'flex-end'
     },
     typography:{
+        width: 'fit-content',
         display: 'flex',
         justifyContent: 'flex-start',
         alignItems: 'center',
@@ -91,6 +92,9 @@ const useStyles = makeStyles((theme) => ({
             animationIterationCount: 'infinite',
         }
     },
+    pointer:{
+        cursor: 'pointer'
+    }
 }));
 
 
@@ -115,7 +119,7 @@ const Contact = () => {
                         &#160;
                         byrne.ois@gmail.com
                     </Typography>
-                    <Typography className={classes.typography} variant='h4'>
+                    <Typography className={clsx(classes.typography, classes.pointer)} variant='h4'>
                         <GitHubIcon 
                         className={ clsx(classes.icon, classes.github)} />
                         &#160;
@@ -123,7 +127,7 @@ const Contact = () => {
                         &#160;
                         <OpenInNewIcon color='disabled' fontSize='small'/>
                     </Typography>
-                    <Typography className={classes.typography} variant='h4'>
+                    <Typography className={clsx(classes.typography, classes.pointer)} variant='h4'>
                         <LinkedInIcon className={ clsx(classes.icon, classes.LinkedIn)} />
                         &#160;
                         LinkedIn

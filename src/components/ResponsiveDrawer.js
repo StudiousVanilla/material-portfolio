@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Drawer from '@material-ui/core/Drawer';
 import Hidden from '@material-ui/core/Hidden';
 import IconButton from '@material-ui/core/IconButton';
-import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
-import CodeIcon from '@material-ui/icons/Code';
-import PersonIcon from '@material-ui/icons/Person';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -16,7 +14,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
+import AccountTreeIcon from '@material-ui/icons/AccountTree';
+import PersonIcon from '@material-ui/icons/Person';
 
 
 const drawerWidth = 150;
@@ -115,7 +115,7 @@ function ResponsiveDrawer(props) {
         {
           text: 'Projects',
           link: 'projects',
-          icon: <CodeIcon color="secondary" />
+          icon: <AccountTreeIcon color="secondary" />
         }, 
         {
         text: 'Contact',

@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme)=>({
     container:{
         width: '70%',
         padding: 30,
-        color: '#fefefe'
+        color: '#fefefe',
     },
     typography:{
         padding: 30
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme)=>({
         marginBottom: 30,
     },
     imgContainerBig:{
-        height: 225
+        height: 225,
     },
     img:{
         width: '100%',
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme)=>({
 }))
 
 
-const WebDev = () => {
+const Learning = () => {
 
     const classes = useStyles()
 
@@ -73,4 +73,4 @@ const WebDev = () => {
      );
 }
  
-export default WebDev;
+export default Learning;

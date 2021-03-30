@@ -6,8 +6,12 @@ import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
 import Button from '@material-ui/core/Button';
 import { Container, StepLabel } from '@material-ui/core';
+import Learning from './AboutSteps/Learning'
+import WebDev from './AboutSteps/WebDev'
+import WhoAmI from './AboutSteps/WhoAmI'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import CodeIcon from '@material-ui/icons/Code';
 
@@ -38,7 +42,7 @@ function ColorlibStepIcon(props) {
   const { active, completed } = props;
 
   const icons = {
-    1: <ArrowBackIcon />,
+    1: <EmojiPeopleIcon />,
     2: <MenuBookIcon />,
     3: <CodeIcon />,
   };
@@ -89,6 +93,10 @@ const useStyles = makeStyles((theme) => ({
       }
     }
   },
+  buttonContainer:{
+    display: 'flex',
+    justifyContent: 'center'
+  },
   tertiary: {
     color: '#fefefe',
     backgroundColor: theme.palette.info.main
@@ -101,22 +109,22 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function getSteps() {
-  return ['My Dev beginings', 'Learning', "What I'm doing now"];
+  return ['Who Am I?', 'Learning to code', "Web Development"];
 }
 
 function getStepContent(step) {
   switch (step) {
     case 0:
       return (
-        'fee'
+        <WhoAmI/>
       )
     case 1:
       return (
-        'fi'
+        <Learning/>
       );
     case 2:
       return (
-        'fo'
+        <WebDev/>
       )
     default:
       return 'fum';
@@ -179,7 +187,7 @@ export default function About() {
             <Container className={classes.instructions}>
               {getStepContent(activeStep)}
             </Container>
-            <div>
+            <div className={classes.buttonContainer}>
               <Button 
               disabled={activeStep === 0} 
               onClick={handleBack} 

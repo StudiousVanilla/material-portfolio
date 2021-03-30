@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme)=>({
 }))
 
 
-const WebDev = () => {
+const WhoAmI = () => {
 
     const classes = useStyles()
 
@@ -73,4 +73,4 @@ const WebDev = () => {
      );
 }
  
-export default WebDev;
+export default WhoAmI;
