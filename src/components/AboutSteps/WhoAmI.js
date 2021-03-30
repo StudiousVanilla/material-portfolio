@@ -1,8 +1,6 @@
-import clsx from 'clsx'
 import { Box, Container, Grid, makeStyles, Typography } from "@material-ui/core";
-import learningPython from './AboutStepsImgs/learningPython.png'
-import learningDCU from './AboutStepsImgs/learningDCU.png'
-import learningTOP from './AboutStepsImgs/learningTOP.svg'
+import whoTCD from './AboutStepsImgs/whoTCD.svg'
+import test from './AboutStepsImgs/test.svg'
 
 const useStyles = makeStyles((theme)=>({
     container:{
@@ -15,15 +13,18 @@ const useStyles = makeStyles((theme)=>({
     },
     imgContainer:{
         height: 200,
+        display: 'flex',
+        justifyContent: 'center',
         marginBottom: 30,
     },
     imgContainerBig:{
         height: 225
     },
     img:{
-        width: '100%',
+        width: '50%',
         height: '100%',
-        filter: `drop-shadow( 1px 1px 10px black);`
+        alignItems: 'center',
+        filter: `drop-shadow( 1px 1px 10px black);`,
     }
 }))
 
@@ -35,38 +36,27 @@ const WhoAmI = () => {
     return ( 
         <Container className={classes.container}>
             <Grid container>
-                <Grid item xs={12} s ={12} m={9} lg ={9}>
+                <Grid item xs={12} s ={12} m={12} lg ={12}>
                     <Typography className={classes.typography}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus inventore dolorem molestias officiis eaque, cum ex excepturi adipisci, aperiam quae reprehenderit quo dolorum a sit consequatur! Magni, tempora molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est temporibus hic quam, eligendi explicabo neque iste harum quas nulla eaque praesentium porro maiores unde earum ipsam rerum adipisci cum culpa.
                     </Typography>
                 </Grid>
-                <Grid item xs ={6} s={12} m={3} lg={3}>
-                    <Box className={clsx(classes.imgContainer, classes.imgContainerBig)}>
-                        <img src={learningPython} alt="Python Crash Course" 
-                        className={classes.img}/>
-                    </Box>
-                </Grid>
-                <Grid item xs ={6} s={12} m={3} lg={3}>
-                    <Box className={clsx(classes.imgContainer, classes.imgContainerBig)}>
-                        <img src={learningDCU} alt="DCU" 
-                        className={classes.img}/>
-                    </Box>
-                </Grid>
-                <Grid item xs={12} s ={12} m={9} lg ={9}>
-                    <Typography className={classes.typography}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus inventore dolorem molestias officiis eaque, cum ex excepturi adipisci, aperiam quae reprehenderit quo dolorum a sit consequatur! Magni, tempora molestiae.
-                    </Typography>
-                </Grid>
-                <Grid item xs={12} s ={12} m={9} lg ={9}>
-                    <Typography className={classes.typography}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus inventore dolorem molestias officiis eaque, cum ex excepturi adipisci, aperiam quae reprehenderit quo dolorum a sit consequatur! Magni, tempora molestiae.
-                    </Typography>
-                </Grid>
-                <Grid item xs ={6} s={12} m={3} lg={3}>
+                <Grid item xs ={6} s={6} m={6} lg={6}>
                     <Box className={classes.imgContainer}>
-                        <img src={learningTOP} alt="The Odin Project" 
+                        <img src={whoTCD} alt="DCU" 
                         className={classes.img}/>
                     </Box>
+                </Grid>
+                <Grid item xs ={6} s={6} m={6} lg={6}>
+                    <Box className={classes.imgContainer}>
+                        <img src={test} alt="DCU" 
+                        className={classes.img}/>
+                    </Box>
+                </Grid>
+                <Grid item xs={12} s ={12} m={12} lg ={12}>
+                    <Typography className={classes.typography}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus inventore dolorem molestias officiis eaque, cum ex excepturi adipisci, aperiam quae reprehenderit quo dolorum a sit consequatur! Magni, tempora molestiae. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti perspiciatis animi eligendi aspernatur quaerat iste ad temporibus libero eaque! Eligendi vero odio sequi voluptas repudiandae dolorum praesentium quia corrupti asperiores.
+                    </Typography>
                 </Grid>
             </Grid>
         </Container>
