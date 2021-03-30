@@ -14,13 +14,24 @@ const theme = createMuiTheme({
       main:'#d500f9'
     }
   },
-  typography: {
-    
+  typography: {   
     h1:{
       fontSize: 50
     },
     h4:{
       fontSize: 32
+    }
+  },
+  overrides: {
+    MuiStepLabel:{
+      LabelContainer: { 
+        label:{
+          root: { 
+            color:'black',
+            fontSize: 13, 
+          },
+        },
+      },
     }
   }
 })

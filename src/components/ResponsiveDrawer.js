@@ -123,7 +123,7 @@ function ResponsiveDrawer(props) {
         icon: <PhoneAndroidIcon color="primary"/>
       }].map((object, index) => (
         
-        <Link href={"#"+object.link} color="textPrimary">
+        <Link href={"#"+object.link} color="textPrimary" key={object.text}>
           <ListItem 
             className={classes.sideList} 
             button 

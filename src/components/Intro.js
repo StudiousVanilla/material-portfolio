@@ -71,9 +71,7 @@ const Intro = () => {
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis saepe voluptatibus sint adipisci ipsa nulla ex eum molestiae, eveniet sunt eaque.
                             </Typography>
                             <PersonIcon
-                                className={
-                                    clsx(classes.cardIcon, classes.tertiary)}
-                            />
+                            className={clsx(classes.cardIcon, classes.tertiary)}/>
                             <Typography className={classes.cardText}>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis saepe voluptatibus sint adipisci ipsa nulla ex eum molestiae, eveniet sunt eaque.
                             </Typography>

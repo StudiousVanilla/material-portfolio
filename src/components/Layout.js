@@ -5,7 +5,6 @@ import About from './About'
 import Projects from './Projects'
 import Contact from './Contact'
 import { Box, makeStyles } from '@material-ui/core';
-import Test from './Test'
 
 const useStyles = makeStyles(() => ({
     root:{
@@ -35,7 +34,6 @@ const Layout = () => {
                 <Intro/>
                 <Link className={classes.link} id="about">
                     <About/>
-                    <Test/>
                 </Link>
                 <Link className={classes.link} id="projects"> 
                     <Projects/>

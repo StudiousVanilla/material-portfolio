@@ -50,37 +50,37 @@ const TSBstack = () => {
                 </Grid>
                 <Grid item className={classes.gridItem}
                  xs={12} s={12} md={12} lg={3}>
-                    <img src={css} alt="css"
+                    <img src={css} title="css" alt="css"
                     className={classes.stackIcon}/>
                 </Grid>
                 <Grid item className={classes.gridItem}
                  xs={12} s={12} md={12} lg={3}>
-                    <img src={javaScp} alt="javaScp"
+                    <img src={javaScp} title="Javascript" alt="javaScp"
                     className={classes.stackIcon}/>
                 </Grid>
                 <Grid item className={classes.gridItem}
                  xs={12} s={12} md={12} lg={3}>
-                    <img src={react} alt="reactJS"
+                    <img src={react} title="React JS" alt="reactJS"
                     className={classes.stackIcon}/>
                 </Grid>
                 <Grid item className={classes.gridItem}
                  xs={12} s={12} md={12} lg={3}>
-                    <img src={firebase} alt="firebase"
+                    <img src={firebase} title="Google Firebase" alt="firebase"
                     className={classes.stackIcon}/>
                 </Grid>
                 <Grid item className={classes.gridItem}
                  xs={12} s={12} md={12} lg={3}>
-                    <img src={node} alt="node"
+                    <img src={node} title="Node JS" alt="node"
                     className={classes.stackIcon}/>
                 </Grid>
                 <Grid item className={classes.gridItem}
                  xs={12} s={12} md={12} lg={3}>
-                    <img src={heroku} alt="heroku"
+                    <img src={heroku} title="Heroku" alt="heroku"
                     className={classes.stackIcon}/>
                 </Grid>
                 <Grid item className={classes.gridItem}
                  xs={12} s={12} md={12} lg={3}>
-                    <img src={netlify} alt="netlify"
+                    <img src={netlify} title="Netlify" alt="netlify"
                     className={classes.stackIcon}/>
                 </Grid>
             </Grid>

@@ -5,17 +5,69 @@ import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepButton from '@material-ui/core/StepButton';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import { Container } from '@material-ui/core';
+import { Container, StepLabel } from '@material-ui/core';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack'
-import Intro from './Intro'
+import MenuBookIcon from '@material-ui/icons/MenuBook';
+import CodeIcon from '@material-ui/icons/Code';
+
+const useColorlibStepIconStyles = makeStyles({
+  root: {
+    backgroundColor: 'transparent',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    '& .MuiSvgIcon-root':{
+      fontSize: 40,
+      marginTop: -5,
+    }
+  },
+  active: {
+    color: '#d500f9',
+    '& .MuiSvgIcon-root':{
+      fontSize: 45,
+    }
+  },
+  completed: {
+    color: '#d500f9'
+  }
+});
+
+function ColorlibStepIcon(props) {
+  const classes = useColorlibStepIconStyles();
+  const { active, completed } = props;
+
+  const icons = {
+    1: <ArrowBackIcon />,
+    2: <MenuBookIcon />,
+    3: <CodeIcon />,
+  };
+
+  return (
+    <div
+      className={clsx(classes.root, {
+        [classes.active]: active,
+        [classes.completed]: completed,
+      })}
+    >
+      {icons[String(props.icon)]}
+    </div>
+  );
+}
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     marginBottom: 100,
     marginTop: 100,
+  },
+  stepper:{
+    backgroundColor: 'transparent'
+  },
+  stepButton:{
+    '& .MuiStepButton-touchRipple':{
+      color: 'transparent',
+    }
   },
   button: {
     marginRight: theme.spacing(1),
@@ -24,11 +76,18 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(1),
   },
   completed: {
-    display: 'inline-block',
+    display: 'flex',
   },
   instructions: {
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
+  },
+  label:{
+    '& .MuiStepLabel-labelContainer':{
+      '& .MuiStepLabel-label':{
+        fontSize: 18
+      }
+    }
   },
   tertiary: {
     color: '#fefefe',
@@ -49,18 +108,18 @@ function getStepContent(step) {
   switch (step) {
     case 0:
       return (
-        <Intro/>
+        'fee'
       )
     case 1:
       return (
-        <Intro/>
+        'fi'
       );
     case 2:
       return (
-        <Intro/>
+        'fo'
       )
     default:
-      return 'Unknown step';
+      return 'fum';
   }
 }
 
@@ -94,14 +153,22 @@ export default function About() {
   return (
     <Container>
       <div className={classes.root}>
-        <Stepper alternativeLabel nonLinear activeStep={activeStep}>
+        <Stepper className={classes.stepper} alternativeLabel nonLinear activeStep={activeStep}>
           {steps.map((label, index) => {
             const stepProps = {};
             const buttonProps = {};
             return (
               <Step key={label} {...stepProps}>
-                <StepButton onClick={handleStep(index)} {...buttonProps}>
-                  {label}
+                <StepButton
+                className={classes.stepButton}    
+                onClick={handleStep(index)} 
+                {...buttonProps}>
+                  <StepLabel 
+                  className={classes.label}  
+                  StepIconComponent={ColorlibStepIcon}
+                  typography='h1'>
+                    {label}
+                  </StepLabel>
                 </StepButton>
               </Step>
             );
@@ -109,7 +176,9 @@ export default function About() {
         </Stepper>
         <div>
           <div>
-            <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+            <Container className={classes.instructions}>
+              {getStepContent(activeStep)}
+            </Container>
             <div>
               <Button 
               disabled={activeStep === 0} 
@@ -119,7 +188,6 @@ export default function About() {
               </Button>
               <Button
               variant="contained"
-              color="info"
               onClick={handleNext}
               className={ clsx(classes.button, classes.tertiary)}>
                 <ArrowForwardIcon/>

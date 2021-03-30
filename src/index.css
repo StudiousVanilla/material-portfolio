@@ -133,3 +133,13 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 100px #525252 inset !important;
 }
 
+.MuiStepConnector-root{
+  margin-top: 4px;
+  display: flex;
+  justify-content: center;
+}
+
+.MuiStepConnector-line, .MuiStepConnector-lineHorizontal{
+  width: 75%;
+  text-align: center;
+}
