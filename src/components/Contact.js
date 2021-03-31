@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 400,
         marginTop: 20,
         paddingTop: 30,
-        borderTop: '1px solid #525252'
     },
     box:{
         width: '100%',

@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     container:{
         display: 'flex',
         justifyContent: 'center',
-        marginTop: 75,
+        marginTop: 150,
         marginBottom: 200
     },
     box:{

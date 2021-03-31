@@ -9,8 +9,8 @@ import AccountTreeIcon from '@material-ui/icons/AccountTree';
 const useStyles = makeStyles((theme) => ({
     container: {
         height: '80vh',
-        marginTop: 100,
-        marginBottom: 100,
+        marginTop: 50,
+        marginBottom: 150,
         display: 'flex',
         alignItems: 'center'
     },
@@ -25,8 +25,10 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     card: {
-        borderRadius: 20,
+        // backgroundColor: 'transparent',
         border: '3px solid transparent',
+        borderRadius: 20,
+        boxShadow: '1px 1px 1px transaprent',
         '&:hover': {
             border: '3px solid'
         },
