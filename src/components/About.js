@@ -62,8 +62,8 @@ function ColorlibStepIcon(props) {
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    marginBottom: 100,
-    marginTop: 100,
+    marginBottom: 200,
+    marginTop: 30
   },
   stepper:{
     backgroundColor: 'transparent'

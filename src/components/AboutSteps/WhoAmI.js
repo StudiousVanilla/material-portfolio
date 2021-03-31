@@ -1,12 +1,13 @@
 import { Box, Container, Grid, makeStyles, Typography } from "@material-ui/core";
 import whoTCD from './AboutStepsImgs/whoTCD.svg'
-import test from './AboutStepsImgs/test.svg'
+import teaching from './AboutStepsImgs/teaching.svg'
 
 const useStyles = makeStyles((theme)=>({
     container:{
         width: '70%',
-        padding: 30,
-        color: '#fefefe'
+        minHeight: 710,
+        padding: 15,
+        color: '#fefefe',
     },
     typography:{
         padding: 30
@@ -49,7 +50,7 @@ const WhoAmI = () => {
                 </Grid>
                 <Grid item xs ={6} s={6} m={6} lg={6}>
                     <Box className={classes.imgContainer}>
-                        <img src={test} alt="DCU" 
+                        <img src={teaching} alt="DCU" 
                         className={classes.img}/>
                     </Box>
                 </Grid>

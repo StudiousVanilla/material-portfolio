@@ -1,29 +1,34 @@
 import clsx from 'clsx'
 import { Box, Container, Grid, makeStyles, Typography } from "@material-ui/core";
-import learningPython from './AboutStepsImgs/learningPython.png'
-import learningDCU from './AboutStepsImgs/learningDCU.png'
-import learningTOP from './AboutStepsImgs/learningTOP.svg'
+import tsbNavy from './AboutStepsImgs/tsbNavy.svg'
+
 
 const useStyles = makeStyles((theme)=>({
     container:{
         width: '70%',
-        padding: 30,
-        color: '#fefefe'
+        minHeight: 710,
+        padding: 15,
+        color: '#fefefe',
     },
     typography:{
         padding: 30
     },
-    imgContainer:{
-        height: 200,
+    tsbContainer:{
+        height: 190,
+        width: 190,
         marginBottom: 30,
-    },
-    imgContainerBig:{
-        height: 225
+        display: 'flex', 
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#fefefe',
+        borderRadius: 1000
     },
     img:{
-        width: '100%',
-        height: '100%',
-        filter: `drop-shadow( 1px 1px 10px black);`
+        width: 192,
+        height: 192,
+    },
+    four:{
+        fontSize: 100
     }
 }))
 
@@ -35,20 +40,25 @@ const WebDev = () => {
     return ( 
         <Container className={classes.container}>
             <Grid container>
+                <Grid item xs ={6} s={12} m={3} lg={3}>
+                <Box className={classes.tsbContainer}>
+                        <img src={tsbNavy} alt="DCU" 
+                        className={classes.img}/>
+                    </Box>
+                </Grid>
                 <Grid item xs={12} s ={12} m={9} lg ={9}>
                     <Typography className={classes.typography}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus inventore dolorem molestias officiis eaque, cum ex excepturi adipisci, aperiam quae reprehenderit quo dolorum a sit consequatur! Magni, tempora molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est temporibus hic quam, eligendi explicabo neque iste harum quas nulla eaque praesentium porro maiores unde earum ipsam rerum adipisci cum culpa.
                     </Typography>
                 </Grid>
-                <Grid item xs ={6} s={12} m={3} lg={3}>
-                    <Box className={clsx(classes.imgContainer, classes.imgContainerBig)}>
-                        <img src={learningPython} alt="Python Crash Course" 
-                        className={classes.img}/>
-                    </Box>
+                <Grid item xs={12} s ={12} m={9} lg ={9}>
+                    <Typography className={classes.typography}>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus inventore dolorem molestias officiis eaque, cum ex excepturi adipisci, aperiam quae reprehenderit quo dolorum a sit consequatur! Magni, tempora molestiae.
+                    </Typography>
                 </Grid>
                 <Grid item xs ={6} s={12} m={3} lg={3}>
-                    <Box className={clsx(classes.imgContainer, classes.imgContainerBig)}>
-                        <img src={learningDCU} alt="DCU" 
+                    <Box className={classes.tsbContainer}>
+                        <img src={tsbNavy} alt="DCU" 
                         className={classes.img}/>
                     </Box>
                 </Grid>
@@ -56,17 +66,6 @@ const WebDev = () => {
                     <Typography className={classes.typography}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus inventore dolorem molestias officiis eaque, cum ex excepturi adipisci, aperiam quae reprehenderit quo dolorum a sit consequatur! Magni, tempora molestiae.
                     </Typography>
-                </Grid>
-                <Grid item xs={12} s ={12} m={9} lg ={9}>
-                    <Typography className={classes.typography}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus inventore dolorem molestias officiis eaque, cum ex excepturi adipisci, aperiam quae reprehenderit quo dolorum a sit consequatur! Magni, tempora molestiae.
-                    </Typography>
-                </Grid>
-                <Grid item xs ={6} s={12} m={3} lg={3}>
-                    <Box className={classes.imgContainer}>
-                        <img src={learningTOP} alt="The Odin Project" 
-                        className={classes.img}/>
-                    </Box>
                 </Grid>
             </Grid>
         </Container>

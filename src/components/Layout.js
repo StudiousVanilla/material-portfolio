@@ -8,7 +8,8 @@ import { Box, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
     root:{
-        display: 'flex'
+        display: 'flex',
+        backgroundColor: '#303030',
     },
     mainContent:{
         width: '100%',
@@ -26,6 +27,7 @@ const useStyles = makeStyles(() => ({
 const Layout = () => {
 
     const classes = useStyles();
+
 
     return ( 
         <div className={classes.root}>

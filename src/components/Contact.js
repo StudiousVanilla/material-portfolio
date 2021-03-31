@@ -14,8 +14,8 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         color: 'rgb(255, 255, 255)',
-        marginBottom: 200,
-        marginTop: 30,
+        marginBottom: 400,
+        marginTop: 20,
         paddingTop: 30,
         borderTop: '1px solid #525252'
     },

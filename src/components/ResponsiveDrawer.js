@@ -26,13 +26,16 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   drawer: {
+    display: 'block',
+    flexShrink: 0,
+    width: drawerWidth,
     [theme.breakpoints.up('sm')]: {
-      width: drawerWidth,
-      flexShrink: 0,
+      display: 'none',
     },
   },
   appBar: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('lg')]: {
+      display: 'none',
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
       position: 'absolute'
@@ -44,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('lg')]: {
       display: 'none',
     },
   },
