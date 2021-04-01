@@ -1,16 +1,17 @@
-import { Box, Container, Grid, makeStyles, Typography } from "@material-ui/core";
+import { Box, Container, Grid, Link, makeStyles, Typography } from "@material-ui/core";
 import whoTCD from './AboutStepsImgs/whoTCD.svg'
 import teaching from './AboutStepsImgs/teaching.svg'
 
 const useStyles = makeStyles((theme)=>({
     container:{
         width: '70%',
-        minHeight: 710,
+        minHeight: 730,
         padding: 15,
         color: '#fefefe',
     },
     typography:{
-        padding: 30
+        padding: '10px 20px 10px 20px',
+        fontSize: '1.18em',
     },
     imgContainer:{
         height: 200,
@@ -26,6 +27,9 @@ const useStyles = makeStyles((theme)=>({
         height: '100%',
         alignItems: 'center',
         filter: `drop-shadow( 1px 1px 10px black);`,
+    },
+    tertiary:{
+        color: theme.palette.info.main
     }
 }))
 
@@ -39,7 +43,13 @@ const WhoAmI = () => {
             <Grid container>
                 <Grid item xs={12} s ={12} m={12} lg ={12}>
                     <Typography className={classes.typography}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus inventore dolorem molestias officiis eaque, cum ex excepturi adipisci, aperiam quae reprehenderit quo dolorum a sit consequatur! Magni, tempora molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est temporibus hic quam, eligendi explicabo neque iste harum quas nulla eaque praesentium porro maiores unde earum ipsam rerum adipisci cum culpa.
+                        My name is Oisín Byrne. I'm 28. I live and work in Dublin, Ireland.
+                        <br/>
+                        <br/>
+                        In 2015, I graduated from Trinity College Dublin with a bachelor's degree in Economics.
+                        <br/>
+                        <br/>
+                        After University, I visited a lot of countries, lived in some of them, and had a few jobs along the way. I've worked as a digital darketing analyst, vineyard worker, librarian, bartender, recruiter, risk analyst for a hedge fund administrator and everything in between.
                     </Typography>
                 </Grid>
                 <Grid item xs ={6} s={6} m={6} lg={6}>
@@ -56,7 +66,13 @@ const WhoAmI = () => {
                 </Grid>
                 <Grid item xs={12} s ={12} m={12} lg ={12}>
                     <Typography className={classes.typography}>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus inventore dolorem molestias officiis eaque, cum ex excepturi adipisci, aperiam quae reprehenderit quo dolorum a sit consequatur! Magni, tempora molestiae. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti perspiciatis animi eligendi aspernatur quaerat iste ad temporibus libero eaque! Eligendi vero odio sequi voluptas repudiandae dolorum praesentium quia corrupti asperiores.
+                        Since 2018, though, I've been working as an English teacher. It's a job I really enjoy and in January 2020 I moved to Spain to teach English and learn Spanish.
+                        <br/>
+                        <br/>
+                        Turns out <Link href='https://www.worldometers.info/coronavirus/' target="_blank" rel="noreferrer" className={classes.tertiary}>2020</Link>  wasn't a good year to relocate.
+                        <br/>
+                        <br/>
+                        Unfortunalty, I was forced to return to Ireland. Having found myself with a lot of freetime, I decided to really work hard on what had been just a hobby up to then: <b>Learning to code</b>
                     </Typography>
                 </Grid>
             </Grid>

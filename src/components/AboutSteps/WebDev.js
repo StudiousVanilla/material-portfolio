@@ -6,7 +6,7 @@ import tsbNavy from './AboutStepsImgs/tsbNavy.svg'
 const useStyles = makeStyles((theme)=>({
     container:{
         width: '70%',
-        minHeight: 710,
+        minHeight: 730,
         padding: 15,
         color: '#fefefe',
     },
@@ -41,7 +41,7 @@ const WebDev = () => {
         <Container className={classes.container}>
             <Grid container>
                 <Grid item xs ={6} s={12} m={3} lg={3}>
-                <Box className={classes.tsbContainer}>
+                    <Box className={classes.tsbContainer}>
                         <img src={tsbNavy} alt="DCU" 
                         className={classes.img}/>
                     </Box>
@@ -55,6 +55,12 @@ const WebDev = () => {
                     <Typography className={classes.typography}>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde minus inventore dolorem molestias officiis eaque, cum ex excepturi adipisci, aperiam quae reprehenderit quo dolorum a sit consequatur! Magni, tempora molestiae.
                     </Typography>
+                </Grid>
+                <Grid item xs ={6} s={12} m={3} lg={3}>
+                    <Box className={classes.tsbContainer}>
+                        <img src={tsbNavy} alt="DCU" 
+                        className={classes.img}/>
+                    </Box>
                 </Grid>
                 <Grid item xs ={6} s={12} m={3} lg={3}>
                     <Box className={classes.tsbContainer}>

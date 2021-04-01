@@ -14,20 +14,6 @@ const useStyles = makeStyles(() => ({
         display: 'flex',
         backgroundColor: '#303030',
     },
-    quickBtns:{
-        position: 'fixed',
-        top: 20,
-        left: 20,
-        display:'flex',
-        flexDirection: 'column',
-    },
-    quickBtn:{
-        fontSize: 50,
-        marginBottom: 10
-    },
-    tertiary:{
-
-    },
     mainContent:{
         width: '100%',
         display: 'flex',

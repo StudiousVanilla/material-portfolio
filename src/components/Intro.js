@@ -79,13 +79,14 @@ const Intro = () => {
                         elevation={6}>
                             <Link href={'#about'} className={classes.link}>
                                 <Container className={classes.cardContent}>
-                                    <Typography className={classes.cardText}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis saepe voluptatibus sint adipisci ipsa nulla ex eum molestiae, eveniet sunt eaque.
+                                    <Typography variant='h2'
+                                    className={classes.cardText}>
+                                        About me
                                     </Typography>
                                     <PersonIcon
                                     className={clsx(classes.cardIcon, classes.tertiary)}/>
                                     <Typography className={classes.cardText}>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis saepe voluptatibus sint adipisci ipsa nulla ex eum molestiae, eveniet sunt eaque.
+                                        Learn a little about me, my background and how I came be be a web developer
                                     </Typography>
                                 </Container>
                             </Link>
@@ -98,13 +99,14 @@ const Intro = () => {
                     elevation={6}>
                         <Link href={'#projects'} className={classes.link}>
                             <Container className={classes.cardContent}>
-                                <Typography className={classes.cardText}>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis saepe voluptatibus sint adipisci ipsa nulla ex eum molestiae, eveniet sunt eaque.
+                                <Typography variant='h2'
+                                className={classes.cardText}>
+                                    My Projects
                                 </Typography>
                                 <AccountTreeIcon 
                                     className={clsx(classes.cardIcon, classes.secondary)}/>
                                 <Typography className={classes.cardText}>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis saepe voluptatibus sint adipisci ipsa nulla ex eum molestiae, eveniet sunt eaque.
+                                Freelance websites, personal projects and practie web applications. Each with tech stack details, live demos and GitHub repo links
                                 </Typography>
                             </Container>
                         </Link>
@@ -116,13 +118,15 @@ const Intro = () => {
                     elevation={6}>
                         <Link href={'#contact'} className={classes.link}>
                             <Container className={classes.cardContent}>
-                                <Typography className={classes.cardText}>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis saepe voluptatibus sint adipisci ipsa nulla ex eum molestiae, eveniet sunt eaque.
+                                <Typography variant='h2'
+                                className={classes.cardText}>
+                                    Contact
                                 </Typography>
                                 <PhoneAndroidIcon 
                                 className={clsx(classes.cardIcon, classes.primary)}/>
                                 <Typography className={classes.cardText}>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, officiis saepe voluptatibus sint adipisci ipsa nulla ex eum molestiae, eveniet sunt eaque.
+                                    Come say hello.
+                                    Send me an email, connnect on LinkedIn and GitHub or use the form to leave a message 
                                 </Typography>
                             </Container>
                             </Link>

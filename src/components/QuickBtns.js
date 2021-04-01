@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
         left: -100,
         display:'flex',
         flexDirection: 'column',
+        [theme.breakpoints.down('md')]: {
+            display: 'none',
+        }
     },
     quickBtn:{
         fontSize: 60,
@@ -39,7 +42,7 @@ const QuickBtns = () => {
 
     const handleQuickBox = () =>{
         const quickBox = document.getElementById("quickBox");
-        if(yScroll < 700){
+        if(yScroll < 500){
             quickBox.style.transition = '1s'
             quickBox.style.left = '-100px'
         }
