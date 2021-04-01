@@ -20,9 +20,10 @@ const useStyles = makeStyles(() => ({
         flexDirection: 'column'
     },
     link:{
-      textDecoration: 'none',
-      '&:hover':{
-        textDecoration: 'none'
+        visibility: 'hidden',
+        textDecoration: 'none',
+        '&:hover':{
+            textDecoration: 'none'
       }
     },
   }));
@@ -39,14 +40,17 @@ const Layout = () => {
             <Box className={classes.mainContent}>
                 <Intro/>
                 <Link className={classes.link} id="about">
-                    <About/>
+                    about
                 </Link>
+                <About/>
                 <Link className={classes.link} id="projects"> 
-                    <Projects/>
+                    projects
                 </Link>
+                <Projects/>
                 <Link className={classes.link} id="contact"> 
-                    <Contact/>
+                    contact
                 </Link>
+                    <Contact/>
                 <Footer/>
             </Box>
         </div>

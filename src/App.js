@@ -14,7 +14,8 @@ const theme = createMuiTheme({
       main:'#d500f9'
     }
   },
-  typography: {   
+  typography: {
+    fontFamily: 'Karla, sans-serif',  
     h1:{
       fontSize: 50
     },

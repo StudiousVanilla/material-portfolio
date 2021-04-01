@@ -45,11 +45,10 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-around"
-
     },
     cardText: {
         color: '#fff',
-        textAlign: 'center'
+        textAlign: 'center',
     },
     cardIcon: {
         fontSize: 80

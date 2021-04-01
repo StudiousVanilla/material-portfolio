@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme)=>({
     },
     typography:{
         padding: '10px 20px 10px 20px',
-        fontSize: '1.18em',
+        fontSize: '1.35em'
     },
     imgContainer:{
         height: 200,
@@ -54,13 +54,13 @@ const WhoAmI = () => {
                 </Grid>
                 <Grid item xs ={6} s={6} m={6} lg={6}>
                     <Box className={classes.imgContainer}>
-                        <img src={whoTCD} alt="DCU" 
+                        <img src={whoTCD} alt="Trinity College Dublin" 
                         className={classes.img}/>
                     </Box>
                 </Grid>
                 <Grid item xs ={6} s={6} m={6} lg={6}>
                     <Box className={classes.imgContainer}>
-                        <img src={teaching} alt="DCU" 
+                        <img src={teaching} alt="Teaching" 
                         className={classes.img}/>
                     </Box>
                 </Grid>
@@ -69,7 +69,11 @@ const WhoAmI = () => {
                         Since 2018, though, I've been working as an English teacher. It's a job I really enjoy and in January 2020 I moved to Spain to teach English and learn Spanish.
                         <br/>
                         <br/>
-                        Turns out <Link href='https://www.worldometers.info/coronavirus/' target="_blank" rel="noreferrer" className={classes.tertiary}>2020</Link>  wasn't a good year to relocate.
+                        Turns out <Link 
+                        href='https://www.worldometers.info/coronavirus/' target="_blank" rel="noreferrer" 
+                        className={classes.tertiary}>
+                            2020
+                        </Link> wasn't a good year to relocate.
                         <br/>
                         <br/>
                         Unfortunalty, I was forced to return to Ireland. Having found myself with a lot of freetime, I decided to really work hard on what had been just a hobby up to then: <b>Learning to code</b>

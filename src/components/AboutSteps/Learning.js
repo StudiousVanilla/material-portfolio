@@ -7,18 +7,20 @@ import learningTOP from './AboutStepsImgs/learningTOP.svg'
 const useStyles = makeStyles((theme)=>({
     container:{
         width: '70%',
-        minHeight: 710,
+        minHeight: 730,
         padding: 10,
         color: '#fefefe',
     },
     gridText: {
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: 20
     },
     typography:{
         padding: '0px 20px 0px 20px',
-        marginBottom: 10,
-        fontSize: '1.17em',
+        marginBottom: 0,
+        fontSize: '1.2em'
     },
     span:{
         fontFamily: 'monospace',
@@ -26,7 +28,6 @@ const useStyles = makeStyles((theme)=>({
     },
     imgContainer:{
         height: 200,
-        marginBottom: 20,
     },
     imgContainerBig:{
         height: 225,
@@ -49,8 +50,8 @@ const Learning = () => {
     return ( 
         <Container className={classes.container}>
             <Grid container>
-                <Grid className={classes.gridText}
-                 item xs={12} s ={12} m={9} lg ={9}>
+                <Grid item className={classes.gridText}
+                  xs={12} s ={12} m={9} lg ={9}>
                     <Typography className={classes.typography}>
                         My <span className={classes.span}>"Hello, World"</span> was in 2018, with the excellent <Link href="https://nostarch.com/pythoncrashcourse2e" target="_blank" rel="noreferrer" className={classes.tertiary}>
                             Python Crash Course.
@@ -63,32 +64,31 @@ const Learning = () => {
                         And while I don't use Python very often anymore, I highly recommend this book to anyone who whats to peak behind the curtain, but doesn't know where to start.
                     </Typography>
                 </Grid>
-                <Grid item xs ={6} s={12} m={3} lg={3}>
+                <Grid item xs ={6} s={12} m={3} lg={3} className={classes.gridText}>
                     <Box className={clsx(classes.imgContainer, classes.imgContainerBig)}>
                         <img src={learningPython} alt="Python Crash Course" 
                         className={classes.img}/>
                     </Box>
                 </Grid>
-                <Grid item xs ={6} s={12} m={3} lg={3}>
+                <Grid item xs ={6} s={12} m={3} lg={3} className={classes.gridText}>
                     <Box className={clsx(classes.imgContainer, classes.imgContainerBig)}>
                         <img src={learningDCU} alt="DCU" 
                         className={classes.img}/>
                     </Box>
                 </Grid>
-                <Grid className={classes.gridText}
-                 item xs={12} s ={12} m={9} lg ={9}>
+                <Grid item className={classes.gridText}
+                  xs={12} s ={12} m={9} lg ={9}>
                     <Typography className={classes.typography}>
-                        In 2019 I enrolled in DCU to complete a Certificate in Computer Programming <Link href="https://www.dcu.ie/registry/ccp-c-35" target="_blank" rel="noreferrer" className={classes.tertiary}> (CCP) </Link>
+                        In 2019 I enrolled in Dublin City University to complete a Certificate in Computer Programming <Link href="https://www.dcu.ie/registry/ccp-c-35" target="_blank" rel="noreferrer" className={classes.tertiary}> (CCP) </Link>
                         <br/>
                         <br/>
                         That course exposed to whole new worlds to greet hello. I dabbled with Java, greeted my old friend Python and began my first steps with HTML, CSS and Javascript.
                         <br/>
-                        <br/>
                         When I graduated in early 2020, I decided to focus on Web Development.
                     </Typography>
                 </Grid>
-                <Grid className={classes.gridText}
-                 item xs={12} s ={12} m={9} lg ={9}>
+                <Grid item className={classes.gridText}
+                  xs={12} s ={12} m={9} lg ={9}>
                     <Typography className={classes.typography}>
                          After searching for different resources, courses and books I came across something that was exactly what I was looking for: <Link href="https://www.theodinproject.com/" target="_blank" rel="noreferrer" className={classes.tertiary}>
                             The Odin Project
@@ -96,7 +96,6 @@ const Learning = () => {
                         <br/>
                         <br/>
                         A curated collection of articles, videos, courses and projects which covers everything you need to know to be a Web Developer. It's self-taught, self-motivated and exactly what I was looking for.
-                        <br/>
                         <br/>
                         I started the course in May 2020, finished it in Januray 2021.
                     </Typography>

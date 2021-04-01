@@ -63,10 +63,10 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     marginBottom: 150,
-    marginTop: 70
+    marginTop: 30
   },
   stepper:{
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
   },
   stepButton:{
     '& .MuiStepButton-touchRipple':{
@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
   label:{
     '& .MuiStepLabel-labelContainer':{
       '& .MuiStepLabel-label':{
-        fontSize: 18
+        fontSize: 18,
       }
     }
   },
