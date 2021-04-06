@@ -49,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
     cardText: {
         color: '#fff',
         textAlign: 'center',
+        // fontSize: '1.45em'
     },
     cardIcon: {
         fontSize: 80
@@ -84,7 +85,7 @@ const Intro = () => {
                                     </Typography>
                                     <PersonIcon
                                     className={clsx(classes.cardIcon, classes.tertiary)}/>
-                                    <Typography className={classes.cardText}>
+                                    <Typography variant='h6' className={classes.cardText}>
                                         Learn a little about me, my background and how I came be be a web developer
                                     </Typography>
                                 </Container>
@@ -104,8 +105,8 @@ const Intro = () => {
                                 </Typography>
                                 <AccountTreeIcon 
                                     className={clsx(classes.cardIcon, classes.secondary)}/>
-                                <Typography className={classes.cardText}>
-                                Freelance websites, personal projects and practie web applications. Each with tech stack details, live demos and GitHub repo links
+                                <Typography variant='h6'  className={classes.cardText}>
+                                Tech stack details, live demos and GitHub repo links
                                 </Typography>
                             </Container>
                         </Link>
@@ -123,9 +124,8 @@ const Intro = () => {
                                 </Typography>
                                 <PhoneAndroidIcon 
                                 className={clsx(classes.cardIcon, classes.primary)}/>
-                                <Typography className={classes.cardText}>
-                                    Come say hello.
-                                    Send me an email, connnect on LinkedIn and GitHub or use the form to leave a message 
+                                <Typography variant='h6'  className={classes.cardText}>
+                                    Don't be shy, come say hello
                                 </Typography>
                             </Container>
                             </Link>

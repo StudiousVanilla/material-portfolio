@@ -63,7 +63,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     marginBottom: 150,
-    marginTop: 30
+    marginTop: 5
   },
   stepper:{
     backgroundColor: 'transparent',

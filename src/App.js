@@ -15,7 +15,7 @@ const theme = createMuiTheme({
     }
   },
   typography: {
-    fontFamily: 'Karla, sans-serif',  
+    fontFamily: 'Lato, sans-serif',  
     h1:{
       fontSize: 50
     },
@@ -24,6 +24,9 @@ const theme = createMuiTheme({
     },
     h4:{
       fontSize: 32
+    },
+    h6:{
+      fontSize: 20
     }
   },
   overrides: {

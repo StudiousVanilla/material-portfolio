@@ -15,12 +15,12 @@ const useStyles = makeStyles((theme)=>({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: 20
+        marginBottom: 10
     },
     typography:{
-        padding: '0px 20px 0px 20px',
+        padding: '0px 10px 0px 20px',
         marginBottom: 0,
-        fontSize: '1.2em'
+        fontSize: '1.32em'
     },
     span:{
         fontFamily: 'monospace',
@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme)=>({
     },
     imgContainer:{
         height: 200,
+        marginBottom: 10
     },
     imgContainerBig:{
         height: 225,
@@ -60,8 +61,6 @@ const Learning = () => {
                         <br/>
                         This was my first foray into the world of programming, and I devoured the book. Reading it during my lunch breaks, practicing in the evenings and building little programs on the weekends. I was hooked.
                         <br/>
-                        <br/>
-                        And while I don't use Python very often anymore, I highly recommend this book to anyone who whats to peak behind the curtain, but doesn't know where to start.
                     </Typography>
                 </Grid>
                 <Grid item xs ={6} s={12} m={3} lg={3} className={classes.gridText}>
@@ -83,7 +82,6 @@ const Learning = () => {
                         <br/>
                         <br/>
                         That course exposed to whole new worlds to greet hello. I dabbled with Java, greeted my old friend Python and began my first steps with HTML, CSS and Javascript.
-                        <br/>
                         When I graduated in early 2020, I decided to focus on Web Development.
                     </Typography>
                 </Grid>
@@ -96,7 +94,6 @@ const Learning = () => {
                         <br/>
                         <br/>
                         A curated collection of articles, videos, courses and projects which covers everything you need to know to be a Web Developer. It's self-taught, self-motivated and exactly what I was looking for.
-                        <br/>
                         I started the course in May 2020, finished it in Januray 2021.
                     </Typography>
                 </Grid>

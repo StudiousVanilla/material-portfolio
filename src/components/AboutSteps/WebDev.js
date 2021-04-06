@@ -1,6 +1,6 @@
-import clsx from 'clsx'
 import { Box, Container, Grid, Link, makeStyles, Typography } from "@material-ui/core";
 import tsbNavy from './AboutStepsImgs/tsbNavy.svg'
+import the404 from './AboutStepsImgs/the404.png'
 
 
 const useStyles = makeStyles((theme)=>({
@@ -11,9 +11,10 @@ const useStyles = makeStyles((theme)=>({
         color: '#fefefe',
     },
     typography:{
-        padding: 30,
+        padding: 22,
         marginBottom: 0,
-        fontSize: '1.3em'
+        fontSize: '1.35em',
+        
     },
     tsbContainer:{
         height: 190,
@@ -25,9 +26,22 @@ const useStyles = makeStyles((theme)=>({
         backgroundColor: '#fefefe',
         borderRadius: 1000
     },
+    gridItem:{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    fourContainer:{
+        height: 190,
+        width: 190,
+        marginBottom: 30,
+        display: 'flex', 
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
     img:{
-        width: 192,
-        height: 192,
+        width: '101%',
+        height: '101%',
     },
     tertiary:{
         color: theme.palette.info.main
@@ -44,10 +58,10 @@ const WebDev = () => {
             <Grid container>
                 <Grid item xs={12} s ={12} m={12} lg ={12}>
                     <Typography className={classes.typography}>
-                        Since completing 'The Odin Project' I've been trying to learn even more. I have dozens and dozens of project repos on my <Link href="https://github.com/StudiousVanilla" target="_blank" rel="noreferrer" className={classes.tertiary}> GitHub </Link>. Some I'm very proud. Others are a little embarressing to look back on now, but that's part of mastering a skill. If you go and poke around my Github profile you can actually see the improvement over time. All this practice paid off though, as I've gotten my first couple of freelance opportunities. Learn a little about them below.
+                        Since completing 'The Odin Project' I've been trying to learn even more. I have dozens and dozens of project repos on my <Link href="https://github.com/StudiousVanilla" target="_blank" rel="noreferrer" className={classes.tertiary}> GitHub </Link>. I have also recently gotten my first couple of freelance opportunities. Learn a little about them below.
                     </Typography>
                 </Grid>
-                <Grid item xs ={6} s={12} m={2} lg={3}>
+                <Grid item xs ={6} s={12} m={2} lg={3} className={classes.gridItem}>
                     <Box className={classes.tsbContainer}>
                         <img src={tsbNavy} alt="The Sounding Board" 
                         className={classes.img}/>
@@ -66,19 +80,20 @@ const WebDev = () => {
                 </Grid>
                 <Grid item xs={12} s ={12} m={9} lg ={9}>
                     <Typography className={classes.typography}>
-                        The 404 is a newsletter that offers a monthly multi-media round up of internet news.
+                        the404* is a newsletter that offers a monthly multi-media round up of internet news.
+                        <br/>
                         <br/>
                         They contacted me to help them build a website where they can host all their content in one place and help direct new users to sign-up.
                         <br/>
                         <br/>
-                        <i style={{fontSize:'15px'}}>
-                        The site is still in early development but a preview/live demo should be available soon.
+                        <i style={{fontSize:'16px'}}>
+                        * The site is still in early development but a demo should be available soon
                         </i>
                     </Typography>
                 </Grid>
-                <Grid item xs ={6} s={12} m={3} lg={3}>
-                    <Box className={classes.tsbContainer}>
-                        <img src={tsbNavy} alt="DCU" 
+                <Grid item xs ={6} s={12} m={3} lg={3} className={classes.gridItem}>
+                    <Box className={classes.fourContainer}>
+                        <img src={the404} alt="the404" 
                         className={classes.img}/>
                     </Box>
                 </Grid>
