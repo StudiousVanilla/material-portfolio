@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import Card from '@material-ui/core/Card';
 import Carousel from 'react-elastic-carousel';
 import TSBCard from './ProjectCards/TSB/TSBCard';
+import MiscCard from './ProjectCards/Misc/MiscCard';
 
 const useStyles = makeStyles((theme) => ({
     container:{
@@ -23,16 +24,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
     },
     box:{
-        width: '100%',
-        [theme.breakpoints.up('mlg')]: {
-            backgroundColor: 'purple'
-        },
-        [theme.breakpoints.up('lg')]: {
-            backgroundColor: 'red'
-        },
-        [theme.breakpoints.up('xl')]: {
-            backgroundColor: 'blue'
-        },  
+        width: '100%', 
     },
     carouselItems: {
       display: "flex",
@@ -61,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('xl')]: {
             margin: theme.spacing(1),
             width: theme.spacing(160),
-            height: theme.spacing(96),
+            height: theme.spacing(104),
           },
       },
     },
@@ -86,7 +78,7 @@ const Projects = () => {
                     </div>
                     <div className={classes.carouselItems}>
                         <Card className={classes.card}>
-                           
+                           <MiscCard/>
                         </Card>
                     </div>
                 </Carousel>

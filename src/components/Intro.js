@@ -122,7 +122,7 @@ const Intro = () => {
                                     <PersonIcon
                                     className={clsx(classes.cardIcon, classes.tertiary)}/>
                                     <Typography variant='h6' className={classes.cardText}>
-                                        Learn a little about me, my background and how I came be be a web developer
+                                        Learn a little about me, my background and how I came to be a web developer
                                     </Typography>
                                 </Container>
                             </Link>

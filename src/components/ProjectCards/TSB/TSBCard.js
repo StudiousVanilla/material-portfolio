@@ -51,13 +51,13 @@ const useStyles = makeStyles((theme) => ({
         display: 'none',
         [theme.breakpoints.up('mlg')]: {
             position: 'absolute',
-            top: 55,
+            top: 60,
             right: 20,
             margin: 0,
             padding: 0,
             display: 'flex',
             fontStyle: 'italic',
-            transform: 'rotate(20deg)'
+            transform: 'rotate(10deg)'
         },
     },
     hoverArrow:{
