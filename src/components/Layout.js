@@ -12,7 +12,7 @@ import { Box, makeStyles } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     root:{
         display: 'flex',
-        backgroundColor: '#303030',
+        backgroundColor: '#303030'
     },
     mainContent:{
         width: '100%',

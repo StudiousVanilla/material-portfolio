@@ -8,10 +8,14 @@ const useStyles = makeStyles((theme)=>({
         minHeight: 730,
         padding: 15,
         color: '#fefefe',
+        [theme.breakpoints.down('md')]: {
+            width: '80%',
+            minHeight: 730,
+        },
     },
     typography:{
         padding: '10px 20px 10px 20px',
-        fontSize: '1.35em'
+        fontSize: '1.4em'
     },
     imgContainer:{
         height: 200,
@@ -24,6 +28,7 @@ const useStyles = makeStyles((theme)=>({
     },
     img:{
         width: '50%',
+        maxWidth: 195,
         height: '100%',
         alignItems: 'center',
         filter: `drop-shadow( 1px 1px 10px black);`,
@@ -49,7 +54,7 @@ const WhoAmI = () => {
                         In 2015, I graduated from Trinity College Dublin with a bachelor's degree in Economics.
                         <br/>
                         <br/>
-                        After University, I visited a lot of countries, lived in some of them, and had a few jobs along the way. I've worked as a digital darketing analyst, vineyard worker, librarian, bartender, recruiter, risk analyst for a hedge fund administrator and everything in between.
+                        After University, I visited a lot of countries, lived in some of them, and had a few jobs along the way. I've worked as a digital marketing analyst, vineyard worker, librarian, bartender, recruiter, risk analyst for a hedge fund administrator and everything in between.
                     </Typography>
                 </Grid>
                 <Grid item xs ={6} s={6} m={6} lg={6}>

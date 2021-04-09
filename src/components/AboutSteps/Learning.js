@@ -10,6 +10,10 @@ const useStyles = makeStyles((theme)=>({
         minHeight: 730,
         padding: 10,
         color: '#fefefe',
+        [theme.breakpoints.down('md')]: {
+            width: '80%',
+            minHeight: 730,
+        },
     },
     gridText: {
         display: 'flex',
@@ -20,7 +24,7 @@ const useStyles = makeStyles((theme)=>({
     typography:{
         padding: '0px 10px 0px 20px',
         marginBottom: 0,
-        fontSize: '1.32em'
+        fontSize: '1.4em'
     },
     span:{
         fontFamily: 'monospace',
@@ -35,6 +39,7 @@ const useStyles = makeStyles((theme)=>({
     },
     img:{
         width: '100%',
+        maxWidth: 195,
         height: '100%',
         filter: `drop-shadow( 1px 1px 10px black);`
     },
@@ -52,7 +57,7 @@ const Learning = () => {
         <Container className={classes.container}>
             <Grid container>
                 <Grid item className={classes.gridText}
-                  xs={12} s ={12} m={9} lg ={9}>
+                  xs={9} s ={9} m={9} lg ={9}>
                     <Typography className={classes.typography}>
                         My <span className={classes.span}>"Hello, World"</span> was in 2018, with the excellent <Link href="https://nostarch.com/pythoncrashcourse2e" target="_blank" rel="noreferrer" className={classes.tertiary}>
                             Python Crash Course.
@@ -63,20 +68,20 @@ const Learning = () => {
                         <br/>
                     </Typography>
                 </Grid>
-                <Grid item xs ={6} s={12} m={3} lg={3} className={classes.gridText}>
+                <Grid item xs ={3} s={3} m={3} lg={3} className={classes.gridText}>
                     <Box className={clsx(classes.imgContainer, classes.imgContainerBig)}>
                         <img src={learningPython} alt="Python Crash Course" 
                         className={classes.img}/>
                     </Box>
                 </Grid>
-                <Grid item xs ={6} s={12} m={3} lg={3} className={classes.gridText}>
+                <Grid item xs ={3} s={3} m={3} lg={3} className={classes.gridText}>
                     <Box className={clsx(classes.imgContainer, classes.imgContainerBig)}>
                         <img src={learningDCU} alt="DCU" 
                         className={classes.img}/>
                     </Box>
                 </Grid>
                 <Grid item className={classes.gridText}
-                  xs={12} s ={12} m={9} lg ={9}>
+                  xs={9} s ={9} m={9} lg ={9}>
                     <Typography className={classes.typography}>
                         In 2019 I enrolled in Dublin City University to complete a Certificate in Computer Programming <Link href="https://www.dcu.ie/registry/ccp-c-35" target="_blank" rel="noreferrer" className={classes.tertiary}> (CCP) </Link>
                         <br/>
@@ -86,7 +91,7 @@ const Learning = () => {
                     </Typography>
                 </Grid>
                 <Grid item className={classes.gridText}
-                  xs={12} s ={12} m={9} lg ={9}>
+                  xs={9} s ={9} m={9} lg ={9}>
                     <Typography className={classes.typography}>
                          After searching for different resources, courses and books I came across something that was exactly what I was looking for: <Link href="https://www.theodinproject.com/" target="_blank" rel="noreferrer" className={classes.tertiary}>
                             The Odin Project
@@ -97,7 +102,7 @@ const Learning = () => {
                         I started the course in May 2020, finished it in Januray 2021.
                     </Typography>
                 </Grid>
-                <Grid item xs ={6} s={12} m={3} lg={3}>
+                <Grid item xs ={3} s={3} m={3} lg={3}>
                     <Box className={classes.imgContainer}>
                         <img src={learningTOP} alt="The Odin Project" 
                         className={classes.img}/>

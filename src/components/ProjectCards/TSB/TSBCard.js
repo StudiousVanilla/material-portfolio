@@ -1,7 +1,7 @@
 import { Box, Container, IconButton, makeStyles, Typography } from "@material-ui/core";
 import clsx from 'clsx'
 import RedoIcon from '@material-ui/icons/Redo';
-import tsbImg from './tsbImg.png'
+import tsbPreview from './tsbPreview.png'
 import tsbGif from './tsbGif.gif'
 import TSBstack from './TSBstack'
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -176,7 +176,7 @@ const TSBCard = () => {
                 </Box>
                 <Box className={clsx(classes.boxItem, 
                 classes.imgContainer)}>
-                    <img src={tsbImg} alt="The Sounding Board"
+                    <img src={tsbPreview} alt="The Sounding Board"
                         className={classes.cardImg} />
                     <img src={tsbGif} alt="The Sounding Board"
                         className={classes.cardGif} />
