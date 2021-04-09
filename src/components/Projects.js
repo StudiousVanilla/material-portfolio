@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('md')]: {
             maxWidth: '90vw'
         },
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+          },
         marginTop: 100,
         marginBottom: 200,
         display: 'flex',
@@ -21,15 +24,6 @@ const useStyles = makeStyles((theme) => ({
     },
     box:{
         width: '100%',
-        [theme.breakpoints.down('sm')]: {
-            backgroundColor: 'yellow'
-        },
-        [theme.breakpoints.up('tab')]: {
-            backgroundColor: 'brown'
-        },
-        [theme.breakpoints.up('md')]: {
-            backgroundColor: 'green'
-        },
         [theme.breakpoints.up('mlg')]: {
             backgroundColor: 'purple'
         },
@@ -57,12 +51,12 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('mlg')]: {
             margin: theme.spacing(1),
             width: theme.spacing(124),
-            height: theme.spacing(88),
+            height: theme.spacing(96),
           },
         [theme.breakpoints.up('lg')]: {
             margin: theme.spacing(1),
             width: theme.spacing(132),
-            height: theme.spacing(88),
+            height: theme.spacing(96),
           },
         [theme.breakpoints.up('xl')]: {
             margin: theme.spacing(1),

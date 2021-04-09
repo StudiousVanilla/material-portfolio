@@ -24,6 +24,9 @@ const drawerWidth = 150;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
+    [theme.breakpoints.down('sm')]: {
+      display: 'none'
+    },
   },
   drawer: {
     display: 'block',
@@ -41,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
       position: 'absolute'
     },
     backgroundColor: '#303030',
+    borderBottom: '1px solid #424242',
     boxShadow: 'none',
     // position is fixed when screen is small
     position: 'fixed'
@@ -67,19 +71,23 @@ const useStyles = makeStyles((theme) => ({
   },
   sideButtons: {
       minWidth: 0,
-      marginRight: 10
-  },
-  sideList: {
-    paddingRight: 35,
-    paddingLeft: 35,
-    marginTop: 15,
-    marginBottom: 15,
+      marginRight: 10,
+      '& span, & svg': {
+        fontSize: '1.3rem'
+      }
+    },
+    sideList: {
+      paddingRight: 35,
+      paddingLeft: 35,
+      marginTop: 15,
+      marginBottom: 15,
   },
   tertiary:{
     color: theme.palette.info.main
   },
   link:{
     textDecoration: 'none',
+    fontSize: 100,
     '&:hover':{
       textDecoration: 'none'
     }
@@ -126,7 +134,7 @@ function ResponsiveDrawer(props) {
         icon: <PhoneAndroidIcon color="primary"/>
       }].map((object, index) => (
         
-        <Link href={"#"+object.link} color="textPrimary" key={object.text}>
+        <Link href={"#"+object.link} color="textPrimary" key={object.text} className={classes.link}>
           <ListItem 
             className={classes.sideList} 
             button 
@@ -136,7 +144,7 @@ function ResponsiveDrawer(props) {
               <ListItemIcon className={classes.sideButtons}>
                   {object.icon}
               </ListItemIcon>
-              <ListItemText>
+              <ListItemText className={classes.sideButtons}>
                   {object.text}
               </ListItemText>
             </ListItem>

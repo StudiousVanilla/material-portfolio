@@ -12,7 +12,10 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 50,
         marginBottom: 150,
         display: 'flex',
-        alignItems: 'center'
+        alignItems: 'center',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        },
     },
     aboutItems: {
         display: "flex",
@@ -114,7 +117,7 @@ const Intro = () => {
                                 <Container className={classes.cardContent}>
                                     <Typography variant='h2'
                                     className={classes.cardTitle}>
-                                        About me
+                                        About
                                     </Typography>
                                     <PersonIcon
                                     className={clsx(classes.cardIcon, classes.tertiary)}/>
@@ -134,7 +137,7 @@ const Intro = () => {
                             <Container className={classes.cardContent}>
                                 <Typography variant='h2'
                                 className={classes.cardTitle}>
-                                    My Projects
+                                    Projects
                                 </Typography>
                                 <AccountTreeIcon 
                                     className={clsx(classes.cardIcon, classes.secondary)}/>

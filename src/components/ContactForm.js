@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import React, { useState } from 'react'
 import { makeStyles } from '@material-ui/core'
 import Container from '@material-ui/core/Container'
@@ -14,7 +15,10 @@ const useStyles = makeStyles((theme)=>({
     marginTop: 20,
     marginBottom: 20,
     display: 'block',
-    }
+    },
+  button:{
+    fontSize: '1.5rem'
+  }
 }))
 
 const ContactForm = () => {
@@ -63,7 +67,7 @@ const ContactForm = () => {
         Leave me a message
       </Typography>
       
-      <form noValidate autoComplete="off" onSubmit={handleSubmit}>
+      <form noValidate autoComplete="off" onSubmit={handleSubmit} className={classes.form}>
         <TextField className={classes.field}
           onChange={(e) => setTitle(e.target.value)}
           label="Name" 
@@ -71,14 +75,20 @@ const ContactForm = () => {
           fullWidth
           required
           autoComplete='off'
-          error={titleError}/>
+          error={titleError}
+          inputProps={{style: {fontSize: '1.5rem'}}} // font size of input text
+          InputLabelProps={{style: {fontSize: '1.5rem'}}} // font size of input 
+          />
         <TextField className={classes.field}
           onChange={(e) => setTitle(e.target.value)}
           label="Email Address" 
           variant="outlined"
           fullWidth
           required
-          error={titleError}/>
+          error={titleError}
+          inputProps={{style: {fontSize: '1.5rem'}}} // font size of input text
+          InputLabelProps={{style: {fontSize: '1.5rem'}}} // font size of input label
+          />
         <TextField className={classes.field}
           onChange={(e) => setDetails(e.target.value)}
           label="Details"
@@ -87,15 +97,18 @@ const ContactForm = () => {
           rows={4}
           fullWidth
           required
-          error={detailsError}/>
+          error={detailsError}
+          inputProps={{style: {fontSize: '1.5rem'}}} // font size of input text
+          InputLabelProps={{style: {fontSize: '1.5rem'}}} // font size of input 
+          />
           
 
         <Button
-            className={classes.tertiary}
+            className={ clsx(classes.tertiary, classes.button)}
             color='primary'
             type="submit"
             variant="contained"
-            endIcon={<KeyboardArrowRightIcon />}>
+            endIcon={<KeyboardArrowRightIcon />} >
             Submit
         </Button>
       </form>

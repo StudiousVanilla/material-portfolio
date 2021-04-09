@@ -8,7 +8,10 @@ const useStyles = makeStyles((theme)=>({
         justifyContent: 'center',
         alignItems: 'center',
         padding: 10,
-        borderTop: '1px solid #424242'
+        borderTop: '1px solid #424242',
+        [theme.breakpoints.down('sm')]: {
+            marginTop: 200,
+        },
     },
     typography:{
         display: 'flex',

@@ -16,7 +16,13 @@ const useStyles = makeStyles((theme) => ({
         color: 'rgb(255, 255, 255)',
         marginBottom: 400,
         marginTop: 20,
-        paddingTop: 30,
+        paddingTop: 50,
+        [theme.breakpoints.down('sm')]: {
+            height:'100vh',
+            marginBottom: 200,
+            marginTop: 10,
+            paddingTop: 10,
+        },
     },
     box:{
         width: '100%',
@@ -59,11 +65,23 @@ const useStyles = makeStyles((theme) => ({
             transform: 'scale(1.02)',
             animation: 'bounce 2s',
             animationIterationCount: 'infinite',
-        }
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '3rem'
+        },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '1.5rem'
+        },
     },
     icon:{
         fontSize: 40,
         color: theme.palette.primary.main,
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '3rem'
+        },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '1.5rem'
+        },
     },
     phone:{
         '&:hover': {

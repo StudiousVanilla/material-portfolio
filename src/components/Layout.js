@@ -9,7 +9,7 @@ import Footer from './Footer'
 import { Box, makeStyles } from '@material-ui/core';
 
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
     root:{
         display: 'flex',
         backgroundColor: '#303030',
@@ -20,6 +20,9 @@ const useStyles = makeStyles(() => ({
         flexDirection: 'column'
     },
     link:{
+        [theme.breakpoints.down('sm')]: {
+           display: 'none'
+        },
         visibility: 'hidden',
         textDecoration: 'none',
         '&:hover':{
