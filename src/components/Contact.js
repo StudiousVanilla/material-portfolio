@@ -24,6 +24,9 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         justifyContent: 'flex-start',
         paddingLeft: 24,
+        [theme.breakpoints.up('lg')]: {
+            paddingLeft: 100
+        },
     },
     gridItem:{
         height: 450,

@@ -26,7 +26,9 @@ const useStlyes = makeStyles((theme)=>({
         alignItems: 'center',
       },
       stackIcon:{
+        maxWidth: 35,
         width: '60%',
+        minWidth: 35,
         '&:hover': {
         transform: 'scale(1.1)',
         animation: 'shake 6s',
@@ -44,42 +46,42 @@ const TSBstack = () => {
             <Grid container className={classes.grid}
             spacing={3}>
                 <Grid item className={classes.gridItem}
-                 xs={12} s={12} md={12} lg={3}>
+                 xs={3} s={3} md={3} lg={3}>
                     <img src={html} title="html" alt="html"
                     className={classes.stackIcon}/>
                 </Grid>
                 <Grid item className={classes.gridItem}
-                 xs={12} s={12} md={12} lg={3}>
+                 xs={3} s={3} md={3} lg={3}>
                     <img src={css} title="css" alt="css"
                     className={classes.stackIcon}/>
                 </Grid>
                 <Grid item className={classes.gridItem}
-                 xs={12} s={12} md={12} lg={3}>
+                 xs={3} s={3} md={3} lg={3}>
                     <img src={javaScp} title="Javascript" alt="javaScp"
                     className={classes.stackIcon}/>
                 </Grid>
                 <Grid item className={classes.gridItem}
-                 xs={12} s={12} md={12} lg={3}>
+                 xs={3} s={3} md={3} lg={3}>
                     <img src={react} title="React JS" alt="reactJS"
                     className={classes.stackIcon}/>
                 </Grid>
                 <Grid item className={classes.gridItem}
-                 xs={12} s={12} md={12} lg={3}>
+                 xs={3} s={3} md={3} lg={3}>
                     <img src={firebase} title="Google Firebase" alt="firebase"
                     className={classes.stackIcon}/>
                 </Grid>
                 <Grid item className={classes.gridItem}
-                 xs={12} s={12} md={12} lg={3}>
+                 xs={3} s={3} md={3} lg={3}>
                     <img src={node} title="Node JS" alt="node"
                     className={classes.stackIcon}/>
                 </Grid>
                 <Grid item className={classes.gridItem}
-                 xs={12} s={12} md={12} lg={3}>
+                 xs={3} s={3} md={3} lg={3}>
                     <img src={heroku} title="Heroku" alt="heroku"
                     className={classes.stackIcon}/>
                 </Grid>
                 <Grid item className={classes.gridItem}
-                 xs={12} s={12} md={12} lg={3}>
+                 xs={3} s={3} md={3} lg={3}>
                     <img src={netlify} title="Netlify" alt="netlify"
                     className={classes.stackIcon}/>
                 </Grid>

@@ -21,7 +21,17 @@ const useStyles = makeStyles((theme) => ({
         "& > *": {
             margin: theme.spacing(0),
             width: theme.spacing(48),
-            height: theme.spacing(56)
+            height: theme.spacing(56),
+            [theme.breakpoints.down('md')]: {
+                margin: theme.spacing(0),
+                width: theme.spacing(36),
+                height: theme.spacing(44),
+            },
+            [theme.breakpoints.down('sm')]: {
+                margin: theme.spacing(0),
+                width: theme.spacing(24),
+                height: theme.spacing(24),
+            },   
         },
     },
     card: {
@@ -44,15 +54,38 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "space-around"
+        justifyContent: "space-around",
+        [theme.breakpoints.down('md')]: {
+            justifyContent: "center"
+        },
+        [theme.breakpoints.down('sm')]: {
+            justifyContent: "space-around"
+        },
+    },
+    cardTitle: {
+        color: '#fff',
+        textAlign: 'center',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '1.2rem',
+        },
     },
     cardText: {
         color: '#fff',
         textAlign: 'center',
-        // fontSize: '1.45em'
+        [theme.breakpoints.down('md')]: {
+           display: 'none'
+        },
     },
     cardIcon: {
-        fontSize: 80
+        fontSize: 80,
+        [theme.breakpoints.down('md')]: {
+            fontSize: 100,
+            marginTop: 50
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '4rem',
+            marginTop: 10
+        },  
     },
     primary:{
         color: theme.palette.primary.main
@@ -72,7 +105,7 @@ const Intro = () => {
     return (
         <Container className={classes.container}>
             <Grid container spacing={4}>
-                    <Grid item xs={12} s={12} md={12} lg={4}
+                    <Grid item xs={4} s={4} md={4} lg={4}
                         className={classes.aboutItems}>
                         <Card 
                         className={clsx(classes.card, classes.tertiary)}
@@ -80,7 +113,7 @@ const Intro = () => {
                             <Link href={'#about'} className={classes.link}>
                                 <Container className={classes.cardContent}>
                                     <Typography variant='h2'
-                                    className={classes.cardText}>
+                                    className={classes.cardTitle}>
                                         About me
                                     </Typography>
                                     <PersonIcon
@@ -92,7 +125,7 @@ const Intro = () => {
                             </Link>
                         </Card>
                     </Grid>
-                <Grid item xs={12} s={12} md={12} lg={4}
+                <Grid item xs={4} s={4} md={4} lg={4}
                     className={classes.aboutItems}>
                     <Card 
                     className={clsx(classes.card, classes.secondary)}
@@ -100,7 +133,7 @@ const Intro = () => {
                         <Link href={'#projects'} className={classes.link}>
                             <Container className={classes.cardContent}>
                                 <Typography variant='h2'
-                                className={classes.cardText}>
+                                className={classes.cardTitle}>
                                     My Projects
                                 </Typography>
                                 <AccountTreeIcon 
@@ -112,14 +145,14 @@ const Intro = () => {
                         </Link>
                     </Card>
                 </Grid>
-                <Grid item xs={12} s={12} md={12} lg={4}
+                <Grid item xs={4} s={4} md={4} lg={4}
                     className={classes.aboutItems}>
                     <Card className={clsx(classes.card, classes.primary)}
                     elevation={6}>
                         <Link href={'#contact'} className={classes.link}>
                             <Container className={classes.cardContent}>
                                 <Typography variant='h2'
-                                className={classes.cardText}>
+                                className={classes.cardTitle}>
                                     Contact
                                 </Typography>
                                 <PhoneAndroidIcon 

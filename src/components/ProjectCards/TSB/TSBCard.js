@@ -11,10 +11,18 @@ const useStyles = makeStyles((theme) => ({
     container: {
         width: '100%',
         height: '100%',
-        display: 'flex'
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        [theme.breakpoints.up('mlg')]: {
+            flexDirection: 'row'
+        },
     },
     box: {
-        width: '50%',
+        width: '100%',
+        [theme.breakpoints.up('mlg')]: {
+            width: '50%'
+        },
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -22,7 +30,10 @@ const useStyles = makeStyles((theme) => ({
     },
     boxRight: {
         position: 'relative',
-        paddingTop: 75,
+        paddingTop: 20,
+        [theme.breakpoints.up('mlg')]: {
+            paddingTop: 75
+        },
         paddingBottom: 0,
         justifyContent: 'space-between',
         marginRight: 0,
@@ -37,22 +48,41 @@ const useStyles = makeStyles((theme) => ({
         borderBottom: `1px dotted ${theme.palette.secondary.main}`
     },
     hoverArrowContainer:{
-        position: 'absolute',
-        top: 55,
-        right: 20,
-        margin: 0,
-        padding: 0,
-        display: 'flex',
-        fontStyle: 'italic',
-        transform: 'rotate(20deg)'
+        display: 'none',
+        [theme.breakpoints.up('mlg')]: {
+            position: 'absolute',
+            top: 55,
+            right: 20,
+            margin: 0,
+            padding: 0,
+            display: 'flex',
+            fontStyle: 'italic',
+            transform: 'rotate(20deg)'
+        },
     },
     hoverArrow:{
         color: theme.palette.secondary.main,
         transform: 'rotate(55deg)'
     },
     imgContainer: {
-        width: 500,
-        height: 300,
+        [theme.breakpoints.up('md')]: {
+            width: 600,
+            height: 360,
+        },
+        [theme.breakpoints.up('mlg')]: {
+            width: 480,
+            height: 288,
+        },
+        [theme.breakpoints.up('lg')]: {
+            width: 500,
+            height: 300,
+        },
+        [theme.breakpoints.up('xl')]: {
+            width: 600,
+            height: 360,
+        },
+        width: 450,
+        height: 270,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

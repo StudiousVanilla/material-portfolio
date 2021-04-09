@@ -40,7 +40,18 @@ const theme = createMuiTheme({
         },
       },
     }
-  }
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      tab: 1000,
+      md: 1250,
+      mlg: 1450,
+      lg: 1550,
+      xl: 1800,
+    },
+  },
 })
 
 function App() {
