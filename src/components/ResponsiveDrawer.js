@@ -13,7 +13,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import Toolbar from '@material-ui/core/Toolbar';
 import Link from '@material-ui/core/Link';
-import Typography from '@material-ui/core/Typography';
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import PersonIcon from '@material-ui/icons/Person';
@@ -43,15 +42,14 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: drawerWidth,
       position: 'absolute'
     },
-    backgroundColor: '#303030',
-    borderBottom: '1px solid #424242',
+    backgroundColor: 'transparent',
     boxShadow: 'none',
     // position is fixed when screen is small
     position: 'fixed',
     
   },
   menuButton: {
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(0.5),
     [theme.breakpoints.up('lg')]: {
       display: 'none',
     },
@@ -170,9 +168,6 @@ function ResponsiveDrawer(props) {
             className={classes.menuButton}>
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            Oisín Byrne
-          </Typography>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer}>

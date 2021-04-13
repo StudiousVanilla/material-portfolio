@@ -5,23 +5,28 @@ import teaching from './AboutStepsImgs/teaching.svg'
 const useStyles = makeStyles((theme)=>({
     container:{
         width: '70%',
-        minHeight: 730,
-        padding: 15,
+        minHeight: 600,
+        maxHeight: 650,
+        padding: 10,
         color: '#fefefe',
         [theme.breakpoints.down('md')]: {
-            width: '80%',
-            minHeight: 730,
+            width: '75%',
+            minHeight: 500,
+            maxHeight: 600,
         },
     },
     typography:{
         padding: '10px 20px 10px 20px',
-        fontSize: '1.4em'
+        fontSize: '1.31em',
+        [theme.breakpoints.down('md')]: {
+            fontSize: '1.165em'
+        }
     },
     imgContainer:{
         height: 200,
         display: 'flex',
         justifyContent: 'center',
-        marginBottom: 30,
+        marginBottom: 10,
     },
     imgContainerBig:{
         height: 225

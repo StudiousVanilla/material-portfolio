@@ -23,17 +23,17 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: "center",
         "& > *": {
             margin: theme.spacing(0),
-            width: theme.spacing(48),
-            height: theme.spacing(56),
-            [theme.breakpoints.down('md')]: {
+            width: theme.spacing(44),
+            height: theme.spacing(52),
+            [theme.breakpoints.down('sm')]: {
                 margin: theme.spacing(0),
-                width: theme.spacing(36),
-                height: theme.spacing(44),
+                width: theme.spacing(32),
+                height: theme.spacing(36),
             },
             [theme.breakpoints.down('sm')]: {
                 margin: theme.spacing(0),
-                width: theme.spacing(24),
-                height: theme.spacing(24),
+                width: theme.spacing(20),
+                height: theme.spacing(20),
             },   
         },
     },
@@ -58,35 +58,28 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-around",
-        [theme.breakpoints.down('md')]: {
-            justifyContent: "center"
-        },
-        [theme.breakpoints.down('sm')]: {
-            justifyContent: "space-around"
-        },
     },
     cardTitle: {
         color: '#fff',
         textAlign: 'center',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '1.2rem',
+            fontSize: '1rem',
         },
     },
     cardText: {
         color: '#fff',
         textAlign: 'center',
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
            display: 'none'
         },
     },
     cardIcon: {
         fontSize: 80,
         [theme.breakpoints.down('md')]: {
-            fontSize: 100,
-            marginTop: 50
+            fontSize: 80,
         },
         [theme.breakpoints.down('sm')]: {
-            fontSize: '4rem',
+            fontSize: '5rem',
             marginTop: 10
         },  
     },

@@ -23,8 +23,8 @@ const useStyles = makeStyles((theme) => ({
         }
     },
     quickBtn:{
-        fontSize: 60,
-        marginBottom: 30,
+        fontSize: 40,
+        marginBottom: 20,
         transition: '3s',
         '&:hover':{
             transform: 'scale(1.05)'

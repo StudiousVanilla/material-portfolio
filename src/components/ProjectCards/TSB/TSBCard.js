@@ -68,6 +68,13 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '1.25rem',
         },
     },
+    textColumn:{
+        padding: 10,
+        [theme.breakpoints.up('mlg')]: {
+            padding: 0,
+            paddingRight: 5
+        },
+    },
     hoverArrowContainer:{
         display: 'none',
         [theme.breakpoints.up('mlg')]: {
@@ -183,15 +190,15 @@ const TSBCard = () => {
                     </Typography>
                 </a>
                 <Typography className={classes.projectText}>
-                    <div>
+                    <div className={classes.textColumn}>
                         The Sounding Board (TSB) is a coaching and HR consultancy service offered by ICF accredited coach Mona Eames. I approached to help build the new TSB website as they were tranisitioning away from Squarespace. 
                         <br /><br />
-                        Tech stack: React - NodeJS/Express - Firebase - Heroku - Netlify
+                        Tech stack:<br/> React - NodeJS/Express - Firebase - Heroku - Netlify
                         <br /><br />
                         This web application uses a lightweight NodeJS/Express backend to fetch data (blog posts, contact form) stored in Google Firebase. These calls are secured using a combination of HTTPS, CORS and Google API restrictions.
                         <br /><br />
                     </div>
-                    <div>
+                    <div className={classes.textColumn}>
                         I worked with a professional designer for this project, implementing their design spec using my own custom CSS.
                         <br /><br />
                         I also built a custom CMS so that the client could write, edit, publish, and delete blog posts from a seperate web app, secured with an additional layer of firebase authentication. 

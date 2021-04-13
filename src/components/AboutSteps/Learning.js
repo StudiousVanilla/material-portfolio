@@ -7,39 +7,45 @@ import learningTOP from './AboutStepsImgs/learningTOP.svg'
 const useStyles = makeStyles((theme)=>({
     container:{
         width: '70%',
-        minHeight: 730,
-        padding: 10,
+        minHeight: 600,
+        maxHeight: 650,
+        padding: 5,
         color: '#fefefe',
         [theme.breakpoints.down('md')]: {
             width: '80%',
-            minHeight: 730,
+            minHeight: 500,
+            maxHeight: 600,
         },
     },
     gridText: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: 10
     },
     typography:{
-        padding: '0px 10px 0px 20px',
-        marginBottom: 0,
-        fontSize: '1.4em'
+        padding: '0px 45px 0px 45px',
+        marginBottom: 40,
+        fontSize: '1.4em',
+        [theme.breakpoints.down('md')]: {
+            marginBottom: 0,
+            padding: '0px 50px 0px 50px',
+            fontSize: '1.22em'
+        }
     },
     span:{
         fontFamily: 'monospace',
         fontSize: '1.3em',
     },
     imgContainer:{
-        height: 200,
-        marginBottom: 10
+        height: 150,
+        maxWidth: 150,
+        marginBottom: 15
     },
     imgContainerBig:{
-        height: 225,
+        height: 180,
     },
     img:{
         width: '100%',
-        maxWidth: 195,
         height: '100%',
         filter: `drop-shadow( 1px 1px 10px black);`
     },
@@ -57,7 +63,7 @@ const Learning = () => {
         <Container className={classes.container}>
             <Grid container>
                 <Grid item className={classes.gridText}
-                  xs={9} s ={9} m={9} lg ={9}>
+                  xs={10} s ={10} m={10} lg ={10}>
                     <Typography className={classes.typography}>
                         My <span className={classes.span}>"Hello, World"</span> was in 2018, with the excellent <Link href="https://nostarch.com/pythoncrashcourse2e" target="_blank" rel="noreferrer" className={classes.tertiary}>
                             Python Crash Course.
@@ -68,21 +74,21 @@ const Learning = () => {
                         <br/>
                     </Typography>
                 </Grid>
-                <Grid item xs ={3} s={3} m={3} lg={3} className={classes.gridText}>
+                <Grid item xs ={2} s={2} m={2} lg={2} className={classes.gridText}>
                     <Box className={clsx(classes.imgContainer, classes.imgContainerBig)}>
                         <img src={learningPython} alt="Python Crash Course" 
                         className={classes.img}/>
                     </Box>
                 </Grid>
-                <Grid item xs ={3} s={3} m={3} lg={3} className={classes.gridText}>
+                <Grid item xs ={2} s={2} m={2} lg={2} className={classes.gridText}>
                     <Box className={clsx(classes.imgContainer, classes.imgContainerBig)}>
                         <img src={learningDCU} alt="DCU" 
                         className={classes.img}/>
                     </Box>
                 </Grid>
                 <Grid item className={classes.gridText}
-                  xs={9} s ={9} m={9} lg ={9}>
-                    <Typography className={classes.typography}>
+                  xs={10} s ={10} m={10} lg ={10}>
+                    <Typography className={classes.typography} style={{paddingBottom: 12}}>
                         In 2019 I enrolled in Dublin City University to complete a Certificate in Computer Programming <Link href="https://www.dcu.ie/registry/ccp-c-35" target="_blank" rel="noreferrer" className={classes.tertiary}> (CCP) </Link>
                         <br/>
                         <br/>
@@ -91,8 +97,8 @@ const Learning = () => {
                     </Typography>
                 </Grid>
                 <Grid item className={classes.gridText}
-                  xs={9} s ={9} m={9} lg ={9}>
-                    <Typography className={classes.typography}>
+                  xs={10} s ={10} m={10} lg ={10}>
+                    <Typography className={classes.typography} style={{marginTop: 35, marginBottom: 35}}>
                          After searching for different resources, courses and books I came across something that was exactly what I was looking for: <Link href="https://www.theodinproject.com/" target="_blank" rel="noreferrer" className={classes.tertiary}>
                             The Odin Project
                             </Link>
@@ -102,7 +108,7 @@ const Learning = () => {
                         I started the course in May 2020, finished it in Januray 2021.
                     </Typography>
                 </Grid>
-                <Grid item xs ={3} s={3} m={3} lg={3}>
+                <Grid item xs ={2} s={2} m={2} lg={2}>
                     <Box className={classes.imgContainer}>
                         <img src={learningTOP} alt="The Odin Project" 
                         className={classes.img}/>

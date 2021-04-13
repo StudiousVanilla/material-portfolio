@@ -5,19 +5,26 @@ import the404 from './AboutStepsImgs/the404.png'
 
 const useStyles = makeStyles((theme)=>({
     container:{
-        width: '70%',
-        minHeight: 730,
-        padding: 15,
+        width: '65%',
+        minWidth: 1000,
+        minHeight: 600,
+        maxHeight: 650,
+        padding: 5,
         color: '#fefefe',
         [theme.breakpoints.down('md')]: {
             width: '80%',
-            minHeight: 730,
+            minHeight: 500,
+            maxHeight: 600,
         },
     },
     typography:{
         padding: 22,
         marginBottom: 0,
-        fontSize: '1.4em',    
+        fontSize: '1.4em',
+        [theme.breakpoints.down('md')]: {
+            padding: 35,
+            fontSize: '1.3em'
+        },    
     },
     tsbContainer:{
         height: 190,
@@ -27,6 +34,10 @@ const useStyles = makeStyles((theme)=>({
         alignItems: 'center',
         backgroundColor: '#0D274F',
         borderRadius: 1000,
+        [theme.breakpoints.down('md')]: {
+            height: 160,
+            width: 160,
+        },
     },
     gridItem:{
         display: 'flex',
@@ -39,7 +50,11 @@ const useStyles = makeStyles((theme)=>({
          display: 'flex', 
         justifyContent: 'center',
         alignItems: 'center',
-        transform: 'rotate(8deg)'
+        transform: 'rotate(8deg)',
+        [theme.breakpoints.down('md')]: {
+            height: 160,
+            width: 160,
+        },  
     },
     img:{
         width: '102%',
