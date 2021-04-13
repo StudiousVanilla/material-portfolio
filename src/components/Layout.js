@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import ResponsiveDrawer from './ResponsiveDrawer';
 import Link from '@material-ui/core/Link';
 import Intro from './Intros/Intro'
@@ -13,7 +14,13 @@ import { Box, makeStyles } from '@material-ui/core';
 const useStyles = makeStyles((theme) => ({
     root:{
         display: 'flex',
-        backgroundColor: '#272727'
+        backgroundColor: '#272727',
+        [theme.breakpoints.down('sm')]: {
+            backgroundColor: 'gray'
+         },
+        [theme.breakpoints.down('xs')]: {
+            backgroundColor: '#272727',
+         },
     },
     mainContent:{
         width: '100%',
@@ -22,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     },
     link:{
         [theme.breakpoints.down('sm')]: {
-           display: 'none'
+           display: 'none',
         },
         visibility: 'hidden',
         textDecoration: 'none',
@@ -30,6 +37,11 @@ const useStyles = makeStyles((theme) => ({
             textDecoration: 'none'
       }
     },
+    contactLink:{
+        [theme.breakpoints.down('sm')]: {
+            display: 'block',
+        },
+    }
   }));
 
 const Layout = () => {
@@ -52,7 +64,7 @@ const Layout = () => {
                     projects
                 </Link>
                 <Projects/>
-                <Link className={classes.link} id="contact"> 
+                <Link className={clsx(classes.link, classes.contactLink)} id="contact"> 
                     contact
                 </Link>
                     <Contact/>

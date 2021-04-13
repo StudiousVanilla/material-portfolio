@@ -76,8 +76,7 @@ const ContactForm = () => {
           required
           autoComplete='off'
           error={titleError}
-          inputProps={{style: {fontSize: '1.5rem'}}} // font size of input text
-          InputLabelProps={{style: {fontSize: '1.5rem'}}} // font size of input 
+          // font size of input 
           />
         <TextField className={classes.field}
           onChange={(e) => setTitle(e.target.value)}
@@ -86,8 +85,6 @@ const ContactForm = () => {
           fullWidth
           required
           error={titleError}
-          inputProps={{style: {fontSize: '1.5rem'}}} // font size of input text
-          InputLabelProps={{style: {fontSize: '1.5rem'}}} // font size of input label
           />
         <TextField className={classes.field}
           onChange={(e) => setDetails(e.target.value)}
@@ -97,9 +94,7 @@ const ContactForm = () => {
           rows={4}
           fullWidth
           required
-          error={detailsError}
-          inputProps={{style: {fontSize: '1.5rem'}}} // font size of input text
-          InputLabelProps={{style: {fontSize: '1.5rem'}}} // font size of input 
+          error={detailsError} 
           />
           
 

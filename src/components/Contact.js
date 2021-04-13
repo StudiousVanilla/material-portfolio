@@ -37,7 +37,11 @@ const useStyles = makeStyles((theme) => ({
     gridItem:{
         height: 450,
         display: 'flex',
-        alignItems: 'flex-end'
+        alignItems: 'flex-end',
+        [theme.breakpoints.down('sm')]: {
+            height: 'fit-content',
+            alignItems: 'flex-start'
+        },
     },
     typography:{
         width: 'fit-content',
@@ -68,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
             animationIterationCount: 'infinite',
         },
         [theme.breakpoints.down('sm')]: {
-            fontSize: '3rem'
+            fontSize: '2rem'
         },
         [theme.breakpoints.down('xs')]: {
             fontSize: '1.5rem'
@@ -117,6 +121,7 @@ const useStyles = makeStyles((theme) => ({
         cursor: 'pointer'
     },
     link:{
+        width: 'fit-content',
         '&:hover':{
             textDecoration: 'none'
         }
@@ -131,7 +136,7 @@ const Contact = () => {
     return (
         <Container>
         <Grid container className={classes.container}>
-            <Grid item xs={12} s={12} md={12} lg={6} 
+            <Grid item xs={12} s={12} md={6} lg={6} 
             className={classes.gridItem}>
                 <Box className={classes.box}>
                     <Typography className={classes.typography} variant='h4'>
@@ -180,7 +185,7 @@ const Contact = () => {
                     </Link>
                 </Box>
             </Grid>
-            <Grid item xs={12} s={12} md={12} lg={6} 
+            <Grid item xs={12} s={12} md={6} lg={6} 
             className={classes.gridItem}>
                 <ContactForm/>
             </Grid>

@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { Box, Container, makeStyles, Typography } from "@material-ui/core";
+import { Box, Container, Link, makeStyles, Typography } from "@material-ui/core";
 import screen from './screen.svg'
 import PersonIcon from '@material-ui/icons/Person';
 import AccountTreeIcon from '@material-ui/icons/AccountTree';
@@ -22,9 +22,10 @@ const useStyles = makeStyles((theme)=> ({
     box:{
         position: 'relative',
         height: '45vh',
+        maxHeight: 300,
         width: '50vw',
         minWidth: 250,
-        maxWidth: 500,
+        maxWidth: 350,
         marginTop: -50,
         zIndex: 1,
      },
@@ -35,16 +36,16 @@ const useStyles = makeStyles((theme)=> ({
      overIconLeft:{
         position: 'absolute',
         top: '25%',
-        left: '20%',
-        height: '25%',
-        width: '25%',
+        left: '18%',
+        height: '27%',
+        width: '27%',
      },
      overIconRight:{
         position: 'absolute',
         top: '25%',
-        right: '20%',
-        height: '25%',
-        width: '25%',
+        right: '18%',
+        height: '27%',
+        width: '27%',
      },
      typography:{
          marginTop: 20,
@@ -58,6 +59,7 @@ const useStyles = makeStyles((theme)=> ({
          color: theme.palette.info.main
      },
      danceBox:{
+         color: '#fefefe',
         position: 'absolute',
         bottom: 5,
         right: 10,
@@ -99,10 +101,12 @@ const MobileIntro = () => {
             <Typography className={classes.typography}>
                 This website is best viewed with a wide screen
             </Typography>
-            <Box className={classes.danceBox}>
-                <ExpandMoreIcon className={classes.arrow}/>
-                <PhoneAndroidIcon className={classes.phone} color='primary'/>
-            </Box>
+            <Link href={"#contact"}>
+                <Box className={classes.danceBox}>
+                    <ExpandMoreIcon className={classes.arrow}/>
+                    <PhoneAndroidIcon className={classes.phone} color='primary'/>
+                </Box>
+            </Link>
         </Container>
      );
 }
