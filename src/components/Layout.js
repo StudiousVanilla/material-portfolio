@@ -1,11 +1,12 @@
 import ResponsiveDrawer from './ResponsiveDrawer';
 import Link from '@material-ui/core/Link';
-import Intro from './Intro'
+import Intro from './Intros/Intro'
+import MobileIntro from './Intros/MobileIntro'
 import QuickBtns from './QuickBtns'
 import About from './About'
 import Projects from './Projects'
 import Contact from './Contact'
-import Footer from './Footer'
+import Footer from './Footer/Footer'
 import { Box, makeStyles } from '@material-ui/core';
 
 
@@ -41,6 +42,7 @@ const Layout = () => {
             <ResponsiveDrawer/>
             <QuickBtns/>
             <Box className={classes.mainContent}>
+                <MobileIntro/>
                 <Intro/>
                 <Link className={classes.link} id="about">
                     about

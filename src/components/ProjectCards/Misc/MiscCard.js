@@ -18,15 +18,16 @@ const useStyles = makeStyles((theme) => ({
     box: {
         position: 'relative',
         width: '100%',
+        height: '100%',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     backdrop: {
         position: 'relative',
         width: '105%',
         height: '100%',
-        zIndex: theme.zIndex.drawer + 1,
+        zIndex: 1,
         color: '#fff',
       },
     typographyContainer:{
@@ -37,12 +38,15 @@ const useStyles = makeStyles((theme) => ({
         flexDirection:'column',
         justifyContent: 'space-evenly',
         alignItems: 'center',
-        zIndex: theme.zIndex.drawer + 2,
+        zIndex: 3,
     },
     typography:{
         paddingTop: 30,
         [theme.breakpoints.down('lg')]: {
             fontSize: 28
+        },
+        [theme.breakpoints.down('md')]: {
+            fontSize: 24
         },
     },
     typographyTop:{
@@ -55,7 +59,10 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             color: theme.palette.secondary.main,
             backgroundColor: 'transparent',
-        }
+        },
+        [theme.breakpoints.down('md')]: {
+            marginBottom: 20
+        },
     },
     iconBtn: {
         borderRadius: 0,

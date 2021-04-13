@@ -1,6 +1,6 @@
 import clsx from 'clsx'
-import { Box, Container, Grid, makeStyles, Typography } from "@material-ui/core";
-import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
+import { Box, Container, Grid, Link, makeStyles, Typography } from "@material-ui/core";
+import DescriptionIcon from '@material-ui/icons/Description';
 import MailIcon from '@material-ui/icons/Mail';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -46,7 +46,8 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         marginTop: 20,
         marginBottom: 30,
-        '&:hover $phone':{
+        color: '#fefefe',
+        '&:hover $cv':{
             transform: 'scale(1.02)',
             animation: 'wobble 0.5s',
             animationIterationCount: 'infinite',
@@ -83,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '1.5rem'
         },
     },
-    phone:{
+    cv:{
         '&:hover': {
             transform: 'scale(1.02)',
             animation: 'wobble 0.5s',
@@ -114,7 +115,12 @@ const useStyles = makeStyles((theme) => ({
     },
     pointer:{
         cursor: 'pointer'
-    }
+    },
+    link:{
+        '&:hover':{
+            textDecoration: 'none'
+        }
+    },
 }));
 
 
@@ -129,31 +135,49 @@ const Contact = () => {
             className={classes.gridItem}>
                 <Box className={classes.box}>
                     <Typography className={classes.typography} variant='h4'>
-                        <PhoneAndroidIcon 
-                        className={ clsx(classes.icon, classes.phone)} />
-                        &#160;
-                        0857416273
-                    </Typography>
-                    <Typography className={classes.typography} variant='h4'>
                         <MailIcon className={ clsx(classes.icon, classes.mail)} />
                         &#160;
                         byrne.ois@gmail.com
                     </Typography>
-                    <Typography className={clsx(classes.typography, classes.pointer)} variant='h4'>
-                        <GitHubIcon 
-                        className={ clsx(classes.icon, classes.github)} />
-                        &#160;
-                        Github
-                        &#160;
-                        <OpenInNewIcon color='disabled' fontSize='small'/>
-                    </Typography>
-                    <Typography className={clsx(classes.typography, classes.pointer)} variant='h4'>
-                        <LinkedInIcon className={ clsx(classes.icon, classes.LinkedIn)} />
-                        &#160;
-                        LinkedIn
-                        &#160;
-                        <OpenInNewIcon color='disabled' fontSize='small'/>
-                    </Typography>
+
+
+                    <Link target="_blank" rel="noopener noreferrer" 
+                    href="O.Byrne.CV2021.pdf" download=""
+                    className={classes.link}>
+                        <Typography className={clsx(classes.typography, classes.pointer)} variant='h4'>
+                            <DescriptionIcon 
+                            className={ clsx(classes.icon, classes.cv)} />
+                            &#160;
+                            Download CV
+                            &#160;
+                            <OpenInNewIcon color='disabled' fontSize='small'/>
+                        </Typography>
+                    </Link>
+
+                    <Link href="https://github.com/StudiousVanilla"
+                    target="_blank" rel="noreferrer"
+                    className={classes.link}>
+                        <Typography className={clsx(classes.typography, classes.pointer)} variant='h4'>
+                            <GitHubIcon 
+                            className={ clsx(classes.icon, classes.github)} />
+                            &#160;
+                            Github
+                            &#160;
+                            <OpenInNewIcon color='disabled' fontSize='small'/>
+                        </Typography>
+                    </Link>
+
+                    <Link href="https://www.linkedin.com/in/ois%C3%ADn-byrne/"
+                    target="_blank" rel="noreferrer"
+                    className={classes.link}>
+                        <Typography className={clsx(classes.typography, classes.pointer)} variant='h4'>
+                            <LinkedInIcon className={ clsx(classes.icon, classes.LinkedIn)} />
+                            &#160;
+                            LinkedIn
+                            &#160;
+                            <OpenInNewIcon color='disabled' fontSize='small'/>
+                        </Typography>
+                    </Link>
                 </Box>
             </Grid>
             <Grid item xs={12} s={12} md={12} lg={6} 

@@ -47,7 +47,8 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: '1px solid #424242',
     boxShadow: 'none',
     // position is fixed when screen is small
-    position: 'fixed'
+    position: 'fixed',
+    
   },
   menuButton: {
     marginRight: theme.spacing(2),
