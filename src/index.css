@@ -159,3 +159,6 @@ input:-webkit-autofill:active {
   text-align: center;
 }
 
+button.MuiButtonBase-root.MuiStepButton-root{
+    padding-bottom: 5px
+}

@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             display: 'none'
           },
-        marginTop: 100,
+        marginTop: 5,
         marginBottom: 200,
         display: 'flex',
         justifyContent: 'center',
@@ -38,22 +38,22 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('md')]: {
             margin: theme.spacing(1),
             width: theme.spacing(120),
-            height: theme.spacing(144),
+            height: theme.spacing(88),
           },
         [theme.breakpoints.up('mlg')]: {
             margin: theme.spacing(1),
-            width: theme.spacing(124),
-            height: theme.spacing(96),
+            width: theme.spacing(144),
+            height: theme.spacing(82),
           },
         [theme.breakpoints.up('lg')]: {
             margin: theme.spacing(1),
-            width: theme.spacing(132),
-            height: theme.spacing(96),
+            width: theme.spacing(144),
+            height: theme.spacing(86),
           },
         [theme.breakpoints.up('xl')]: {
             margin: theme.spacing(1),
             width: theme.spacing(160),
-            height: theme.spacing(104),
+            height: theme.spacing(100),
           },
       },
     },

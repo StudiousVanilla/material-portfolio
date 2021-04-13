@@ -21,6 +21,7 @@ const useColorlibStepIconStyles = makeStyles({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    padding: 0,
     '& .MuiSvgIcon-root':{
       fontSize: 40,
       marginTop: -5,
@@ -148,12 +149,18 @@ export default function About() {
   };
 
   const handleNext = () => {
+    document.querySelector('#about').scrollIntoView({
+      behavior: 'smooth'
+    });
     const newActiveStep = 
     isLastStep() ? 0 : activeStep + 1;
     setActiveStep(newActiveStep);
   };
 
   const handleBack = () => {
+    document.querySelector('#about').scrollIntoView({
+      behavior: 'smooth'
+    });
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 

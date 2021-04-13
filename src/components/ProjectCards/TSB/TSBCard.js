@@ -14,13 +14,13 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        [theme.breakpoints.up('mlg')]: {
+        [theme.breakpoints.up('sm')]: {
             flexDirection: 'row'
         },
     },
     box: {
         width: '100%',
-        [theme.breakpoints.up('mlg')]: {
+        [theme.breakpoints.up('sm')]: {
             width: '50%'
         },
         display: 'flex',
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     boxRight: {
         position: 'relative',
         paddingTop: 20,
-        [theme.breakpoints.up('mlg')]: {
+        [theme.breakpoints.up('sm')]: {
             paddingTop: 75
         },
         paddingBottom: 0,
@@ -52,25 +52,31 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: 10
     },
     title: {
-        borderBottom: `1px dotted ${theme.palette.secondary.main}`
+        borderBottom: `1px dotted ${theme.palette.secondary.main}`,
+        [theme.breakpoints.up('md')]: {
+            fontSize: 45
+        },
     },
     projectText:{
         fontSize: '1.05rem',
         display: 'flex',
-        [theme.breakpoints.up('mlg')]: {
+        [theme.breakpoints.up('sm')]: {
             flexDirection:'column',
-            fontSize: '1.08rem',
+            fontSize: '1.05rem',
+        },
+        [theme.breakpoints.up('md')]: {
+            fontSize: '1rem',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '1.1rem',
+            fontSize: '1.06rem',
         },
         [theme.breakpoints.up('xl')]: {
-            fontSize: '1.25rem',
+            fontSize: '1.2rem',
         },
     },
     textColumn:{
         padding: 10,
-        [theme.breakpoints.up('mlg')]: {
+        [theme.breakpoints.up('md')]: {
             padding: 0,
             paddingRight: 5
         },
@@ -94,8 +100,8 @@ const useStyles = makeStyles((theme) => ({
     },
     imgContainer: {
         [theme.breakpoints.up('md')]: {
-            width: 600,
-            height: 360,
+            width: 480,
+            height: 288,
         },
         [theme.breakpoints.up('mlg')]: {
             width: 480,
