@@ -188,7 +188,7 @@ const TSBCard = () => {
                         <br /><br />
                         Tech stack: React - NodeJS/Express - Firebase - Heroku - Netlify
                         <br /><br />
-                        This web application uses a lightweight NodeJS/Express backend to fetch data (blog posts + contact form) stored in Google Firebase. These calls are secured using a combination of HTTPS, CORS and Google API restrictions.
+                        This web application uses a lightweight NodeJS/Express backend to fetch data (blog posts, contact form) stored in Google Firebase. These calls are secured using a combination of HTTPS, CORS and Google API restrictions.
                         <br /><br />
                     </div>
                     <div>
