@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('mlg')]: {
             flexDirection: 'row'
         },
+        [theme.breakpoints.down('sm')]: {
+            width: '105%',
+        },
     },
     box: {
         position: 'relative',
@@ -29,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
         height: '100%',
         zIndex: 1,
         color: '#fff',
+        [theme.breakpoints.down('sm')]: {
+            width: '110%',
+        },
       },
     typographyContainer:{
         position: 'absolute',

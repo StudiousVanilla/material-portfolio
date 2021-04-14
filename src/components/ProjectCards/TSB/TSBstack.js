@@ -14,16 +14,26 @@ const useStlyes = makeStyles((theme)=>({
         height: '100%',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
-      },
+        alignItems: 'center',
+    },
       grid: {
         width: '100%',
         height: '100%',
+        [theme.breakpoints.down('sm')]: {
+            width: '110%',
+            height: '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-evenly'
+        },
       },
       gridItem:{
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        [theme.breakpoints.down('sm')]: {
+
+        },
       },
       stackIcon:{
         maxWidth: 35,
@@ -33,7 +43,10 @@ const useStlyes = makeStyles((theme)=>({
         transform: 'scale(1.1)',
         animation: 'shake 6s',
         animationIterationCount: 'infinite',
-        }
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+        },
+    }
     }
 }));
 
@@ -43,6 +56,9 @@ const TSBstack = () => {
     const classes = useStlyes();
 
     return ( 
+
+
+        
             <Grid container className={classes.grid}
             spacing={3}>
                 <Grid item className={classes.gridItem}

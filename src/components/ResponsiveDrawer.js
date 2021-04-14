@@ -23,7 +23,11 @@ const drawerWidth = 150;
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
-    [theme.breakpoints.down('sm')]: {
+    position: 'absolute',
+    [theme.breakpoints.up('lg')]: {
+      display: 'none'
+    },
+    [theme.breakpoints.only('xs')]: {
       display: 'none'
     },
   },

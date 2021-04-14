@@ -14,6 +14,12 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center',
         [theme.breakpoints.down('sm')]: {
+            display: 'flex'
+        },
+        ['@media (max-width:960px)']:{
+
+        },
+        [theme.breakpoints.down('xs')]: {
             display: 'none'
         },
     },
@@ -30,11 +36,11 @@ const useStyles = makeStyles((theme) => ({
                 width: theme.spacing(32),
                 height: theme.spacing(36),
             },
-            [theme.breakpoints.down('sm')]: {
+            ['@media (max-width:960px)']: {
                 margin: theme.spacing(0),
-                width: theme.spacing(20),
-                height: theme.spacing(20),
-            },   
+                width: theme.spacing(24),
+                height: theme.spacing(22),
+            }, 
         },
     },
     card: {
@@ -63,15 +69,22 @@ const useStyles = makeStyles((theme) => ({
         color: '#fff',
         textAlign: 'center',
         [theme.breakpoints.down('sm')]: {
-            fontSize: '1rem',
+            fontSize: '1.5rem',
+        },
+        ['@media (max-width:960px)']: {
+            fontSize: '1.5rem'
         },
     },
     cardText: {
         color: '#fff',
         textAlign: 'center',
         [theme.breakpoints.down('sm')]: {
-           display: 'none'
+           display: 'flex',
+           fontSize: '1rem'
         },
+        ['@media (max-width:960px)']:{
+            display: 'none'
+        }
     },
     cardIcon: {
         fontSize: 80,

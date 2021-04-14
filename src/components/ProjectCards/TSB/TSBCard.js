@@ -12,15 +12,12 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         height: '100%',
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: 'row',
         justifyContent: 'center',
-        [theme.breakpoints.up('sm')]: {
-            flexDirection: 'row'
-        },
     },
     box: {
         width: '100%',
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('md')]: {
             width: '50%'
         },
         display: 'flex',
@@ -37,13 +34,14 @@ const useStyles = makeStyles((theme) => ({
     },
     boxRight: {
         position: 'relative',
-        paddingTop: 20,
-        [theme.breakpoints.up('sm')]: {
-            paddingTop: 75
-        },
         paddingBottom: 0,
         justifyContent: 'space-between',
         marginRight: 0,
+        paddingTop: 60,
+        [theme.breakpoints.down('sm')]: {
+            paddingTop: 50,
+            justifyContent: 'flex-start',
+        },
     },
     boxItem: {
         marginBottom: 20,
@@ -53,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         borderBottom: `1px dotted ${theme.palette.secondary.main}`,
+        fontSize: '2rem',
         [theme.breakpoints.up('md')]: {
             fontSize: 45
         },
@@ -60,12 +59,13 @@ const useStyles = makeStyles((theme) => ({
     projectText:{
         fontSize: '1.05rem',
         display: 'flex',
+        flexDirection:'column',
         [theme.breakpoints.up('sm')]: {
-            flexDirection:'column',
-            fontSize: '1.05rem',
+            fontSize: '0.9rem',
         },
         [theme.breakpoints.up('md')]: {
-            fontSize: '1rem',
+            fontSize: '0.98rem',
+            flexDirection:'column',
         },
         [theme.breakpoints.up('lg')]: {
             fontSize: '1.06rem',
@@ -74,11 +74,25 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '1.2rem',
         },
     },
-    textColumn:{
-        padding: 10,
-        [theme.breakpoints.up('md')]: {
-            padding: 0,
-            paddingRight: 5
+    projectTextUnderWrap:{
+        position: "static",
+        display: 'flex',
+        flexDirection: 'column',
+        padding: 0,
+        [theme.breakpoints.down('sm')]: {
+            position: "absolute",
+            width: 720,
+            left: 30,
+            bottom: 30,
+            paddingLeft: 20,
+            flexDirection: 'row',
+            fontSize: '0.9rem',
+        },
+    },
+    underWrap:{
+        [theme.breakpoints.down('sm')]: {
+            width: '50%',
+            paddingRight: 50,
         },
     },
     hoverArrowContainer:{
@@ -99,6 +113,10 @@ const useStyles = makeStyles((theme) => ({
         transform: 'rotate(55deg)'
     },
     imgContainer: {
+        [theme.breakpoints.up('sm')]: {
+            width: 360,
+            height: 216,
+        },
         [theme.breakpoints.up('md')]: {
             width: 480,
             height: 288,
@@ -149,6 +167,9 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         alignItems: 'center',
         paddingBottom: 0,
+        [theme.breakpoints.down('sm')]: {
+            width: '80%',
+        },
     },
     linksBox: {
         width: '65%',
@@ -158,7 +179,10 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 10,
         marginTop: 50,
         paddingTop: 20,
-        borderTop: `1px dotted ${theme.palette.secondary.main}`
+        borderTop: `1px dotted ${theme.palette.secondary.main}`,
+        [theme.breakpoints.down('sm')]: {
+            width: '80%',
+        },
     },
     iconBtn: {
         paddingTop: 2,   
@@ -175,6 +199,9 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: 5,
         fontSize: 45,
         backgroundColor: 'transparent',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: 40,
+        },
     },
     iconLabels:{
         fontSize: '0.8rem',
@@ -196,23 +223,26 @@ const TSBCard = () => {
                     </Typography>
                 </a>
                 <Typography className={classes.projectText}>
-                    <div className={classes.textColumn}>
                         The Sounding Board (TSB) is a coaching and HR consultancy service offered by ICF accredited coach Mona Eames. I approached to help build the new TSB website as they were tranisitioning away from Squarespace. 
                         <br /><br />
                         Tech stack:<br/> React - NodeJS/Express - Firebase - Heroku - Netlify
                         <br /><br />
                         This web application uses a lightweight NodeJS/Express backend to fetch data (blog posts, contact form) stored in Google Firebase. These calls are secured using a combination of HTTPS, CORS and Google API restrictions.
                         <br /><br />
-                    </div>
-                    <div className={classes.textColumn}>
                         I worked with a professional designer for this project, implementing their design spec using my own custom CSS.
                         <br /><br />
-                        I also built a custom CMS so that the client could write, edit, publish, and delete blog posts from a seperate web app, secured with an additional layer of firebase authentication. 
-                        <br /><br />
+                        I also built a custom CMS so that the client could write, edit, publish, and delete blog posts from a seperate web app, secured with an additional layer of firebase authentication.
+                        <br /><br /> 
+                </Typography>
+                <Typography className={clsx(classes.projectText, classes.projectTextUnderWrap)}>
+                    <div className={clsx(classes.projectText, classes.underWrap)}>
                         Hosted on Netlify with two domains integrated from Blacknight.com
-                        <br /><br />
+                    </div>
+                        <br/>
+                    <div className={clsx(classes.projectText, classes.underWrap)}>
                         This web app is not yet responsive as the client wanted to focus on desktop preformance first.
                     </div>
+
                 </Typography>
             </Box>
             <Box className={clsx(classes.box, classes.boxRight)}>

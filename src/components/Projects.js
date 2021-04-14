@@ -9,15 +9,16 @@ const useStyles = makeStyles((theme) => ({
     container:{
         maxWidth: '80vw',
         minWidth: 500,
-        [theme.breakpoints.up('tab')]: {
-            maxWidth: '100vw'
-        },
         [theme.breakpoints.up('md')]: {
             maxWidth: '90vw'
         },
         [theme.breakpoints.down('sm')]: {
-            display: 'none'
+            width: '95vw',
+            maxWidth: 980,
           },
+          ['@media (max-width:960px)']: {
+            display: 'none'
+        },
         marginTop: 5,
         marginBottom: 200,
         display: 'flex',
@@ -30,10 +31,10 @@ const useStyles = makeStyles((theme) => ({
       display: "flex",
       flexWrap: "wrap",
       "& > *": {
-        [theme.breakpoints.up('tab')]: {
+        [theme.breakpoints.up('sm')]: {
             margin: theme.spacing(1),
-            width: theme.spacing(104),
-            height: theme.spacing(144),
+            width: theme.spacing(98),
+            height: theme.spacing(82),
           },
         [theme.breakpoints.up('md')]: {
             margin: theme.spacing(1),

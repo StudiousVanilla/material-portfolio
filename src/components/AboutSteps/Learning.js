@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme)=>({
             marginTop: 20,
             width: '100%',
             height: 'fit-content',
-            maxHeight: 750,
+            maxHeight: 825,
         },
     },
     gridText: {

@@ -88,7 +88,7 @@ const WhoAmI = () => {
                 </Grid>
                 <Grid item xs={12} s ={12} m={12} lg ={12}>
                     <Typography className={classes.typography}>
-                        Since 2018, though, I've been working as an English teacher. It's a job I really enjoy and in January 2020 I moved to Spain to teach English and learn Spanish.
+                        In 2018 I start working as an English teacher. It's a job I really enjoy and in January 2020 I moved to Spain to teach English and learn Spanish.
                         <br/>
                         <br/>
                         Turns out <Link 

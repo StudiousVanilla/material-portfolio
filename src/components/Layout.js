@@ -15,9 +15,6 @@ const useStyles = makeStyles((theme) => ({
     root:{
         display: 'flex',
         backgroundColor: '#272727',
-        [theme.breakpoints.only('sm')]: {
-            backgroundColor: 'gray'
-         },
         ['@media (max-width:960px)']: {
             backgroundColor: 'red'
         },
@@ -31,21 +28,13 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column'
     },
     link:{
-        [theme.breakpoints.down('sm')]: {
-           display: 'none',
-        },
         visibility: 'hidden',
         textDecoration: 'none',
         '&:hover':{
             textDecoration: 'none'
       }
-    },
-    contactLink:{
-        [theme.breakpoints.down('sm')]: {
-            display: 'block',
-        },
     }
-  }));
+}));
 
 const Layout = () => {
 
@@ -59,7 +48,7 @@ const Layout = () => {
             <Box className={classes.mainContent}>
                 <MobileIntro/>
                 <Intro/>
-                <Link className={clsx(classes.link, classes.contactLink)} id="about">
+                <Link className={classes.link} id="about">
                     about
                 </Link>
                 <About/>
@@ -67,7 +56,7 @@ const Layout = () => {
                     projects
                 </Link>
                 <Projects/>
-                <Link className={clsx(classes.link, classes.contactLink)} id="contact"> 
+                <Link className={classes.link} id="contact"> 
                     contact
                 </Link>
                     <Contact/>

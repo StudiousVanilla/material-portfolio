@@ -55,6 +55,47 @@ button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
 }
 
 
+@media only screen and (max-width: 1200px) {
+  .rec.rec-arrow {
+    font-size: 1em;
+    border: none;
+    background-color:transparent;
+  }
+
+  .rec.rec-arrow:focus:enabled, .rec.rec-arrow:hover:enabled{
+    border: none;
+    background-color: transparent;
+  }
+
+  .rec.rec-arrow:disabled{
+    color: rgba(255, 255, 255, 0.123);
+    background-color: transparent;
+  }
+
+  .sc-bdvvaa{
+    display: 'none';
+    width: 0px;
+    max-width: 10px;
+    max-height: 10px;
+    min-width: none;
+  }
+
+  .bSWeAW, .hSiCVM{
+    display: 'none';
+    width: 0px;
+    height: 0px;
+    max-width: 0px;
+    max-height: 0px;
+    max-width: 0px;
+    max-height: 0px;
+    min-width: none;
+  }
+
+}
+
+
+
+
 
 /* ↑↑↑ for react elastic carousel ↑↑↑ */
 
