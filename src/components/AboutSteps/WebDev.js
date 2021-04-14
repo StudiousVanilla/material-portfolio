@@ -16,6 +16,13 @@ const useStyles = makeStyles((theme)=>({
             minHeight: 500,
             maxHeight: 600,
         },
+        [theme.breakpoints.down('sm')]: {
+            minWidth: 1,
+            marginTop: 50,
+            width: '100%',
+            height: 'fit-content',
+            maxHeight: 750,
+          },
     },
     typography:{
         padding: 22,
@@ -24,7 +31,11 @@ const useStyles = makeStyles((theme)=>({
         [theme.breakpoints.down('md')]: {
             padding: 35,
             fontSize: '1.3em'
-        },    
+        },  
+        [theme.breakpoints.down('sm')]: {
+            padding: 25,
+            fontSize: '1.1em'
+        },  
     },
     tsbContainer:{
         height: 190,

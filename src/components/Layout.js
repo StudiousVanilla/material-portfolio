@@ -15,9 +15,12 @@ const useStyles = makeStyles((theme) => ({
     root:{
         display: 'flex',
         backgroundColor: '#272727',
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.only('sm')]: {
             backgroundColor: 'gray'
          },
+        ['@media (max-width:960px)']: {
+            backgroundColor: 'red'
+        },
         [theme.breakpoints.down('xs')]: {
             backgroundColor: '#272727',
          },
@@ -56,7 +59,7 @@ const Layout = () => {
             <Box className={classes.mainContent}>
                 <MobileIntro/>
                 <Intro/>
-                <Link className={classes.link} id="about">
+                <Link className={clsx(classes.link, classes.contactLink)} id="about">
                     about
                 </Link>
                 <About/>

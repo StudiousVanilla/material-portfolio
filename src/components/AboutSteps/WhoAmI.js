@@ -14,6 +14,12 @@ const useStyles = makeStyles((theme)=>({
             minHeight: 500,
             maxHeight: 600,
         },
+        [theme.breakpoints.down('sm')]: {
+            marginTop: 50,
+            width: '100%',
+            height: 'fit-content',
+            maxHeight: 750,
+          },
     },
     typography:{
         padding: '10px 20px 10px 20px',
@@ -27,6 +33,9 @@ const useStyles = makeStyles((theme)=>({
         display: 'flex',
         justifyContent: 'center',
         marginBottom: 10,
+        [theme.breakpoints.down('sm')]: {
+            height: 150,
+          },
     },
     imgContainerBig:{
         height: 225
@@ -37,6 +46,9 @@ const useStyles = makeStyles((theme)=>({
         height: '100%',
         alignItems: 'center',
         filter: `drop-shadow( 1px 1px 10px black);`,
+        [theme.breakpoints.down('sm')]: {
+            maxWidth: 150,
+          },
     },
     tertiary:{
         color: theme.palette.info.main

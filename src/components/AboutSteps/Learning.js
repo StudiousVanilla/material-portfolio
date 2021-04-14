@@ -16,6 +16,12 @@ const useStyles = makeStyles((theme)=>({
             minHeight: 500,
             maxHeight: 600,
         },
+        [theme.breakpoints.down('sm')]: {
+            marginTop: 20,
+            width: '100%',
+            height: 'fit-content',
+            maxHeight: 750,
+        },
     },
     gridText: {
         display: 'flex',
@@ -30,7 +36,25 @@ const useStyles = makeStyles((theme)=>({
             marginBottom: 0,
             padding: '0px 50px 0px 50px',
             fontSize: '1.22em'
-        }
+        },
+        [theme.breakpoints.down('sm')]: {
+            padding: 25,
+            marginBottom: 2,
+            marginTop: 2
+        },
+    },
+    typographyFinal:{
+        marginTop: 10,
+        marginBottom: 35,
+        [theme.breakpoints.down('md')]: {
+            marginTop: 20,
+            marginBottom: 20,
+        },
+        [theme.breakpoints.down('sm')]: {
+            marginTop: 2,
+            marginBottom: 2,
+        },
+
     },
     span:{
         fontFamily: 'monospace',
@@ -39,15 +63,27 @@ const useStyles = makeStyles((theme)=>({
     imgContainer:{
         height: 150,
         maxWidth: 150,
-        marginBottom: 15
+        marginBottom: 15,
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            height: '100%',
+            margin: -7,
+          },
     },
     imgContainerBig:{
-        height: 180,
+        height: 160,
+        [theme.breakpoints.down('sm')]: {
+            width: '16vw',
+            maxWidth: 125
+        },
     },
     img:{
         width: '100%',
         height: '100%',
         filter: `drop-shadow( 1px 1px 10px black);`
+    },
+    odinGrid:{
+        marginTop: 30
     },
     tertiary:{
         color: theme.palette.info.main
@@ -98,7 +134,7 @@ const Learning = () => {
                 </Grid>
                 <Grid item className={classes.gridText}
                   xs={10} s ={10} m={10} lg ={10}>
-                    <Typography className={classes.typography} style={{marginTop: 35, marginBottom: 35}}>
+                    <Typography className={clsx(classes.typography,classes.typographyFinal)}>
                          After searching for different resources, courses and books I came across something that was exactly what I was looking for: <Link href="https://www.theodinproject.com/" target="_blank" rel="noreferrer" className={classes.tertiary}>
                             The Odin Project
                             </Link>
@@ -108,7 +144,7 @@ const Learning = () => {
                         I started the course in May 2020, finished it in Januray 2021.
                     </Typography>
                 </Grid>
-                <Grid item xs ={2} s={2} m={2} lg={2}>
+                <Grid item xs ={2} s={2} m={2} lg={2} className={classes.odinGrid}>
                     <Box className={classes.imgContainer}>
                         <img src={learningTOP} alt="The Odin Project" 
                         className={classes.img}/>

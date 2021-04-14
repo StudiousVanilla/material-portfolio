@@ -1,6 +1,7 @@
 import {createMuiTheme, ThemeProvider} from '@material-ui/core';
 import Layout from './components/Layout';
 
+
 const theme = createMuiTheme({
   palette: {
     type: 'dark',
@@ -45,8 +46,8 @@ const theme = createMuiTheme({
     values: {
       xs: 0,
       sm: 600,
-      tab: 1000,
-      md: 1250,
+      laptop: 960, 
+      md: 1260,
       mlg: 1450,
       lg: 1550,
       xl: 1800,

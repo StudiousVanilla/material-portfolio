@@ -66,11 +66,24 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 200,
     marginTop: -10,
     [theme.breakpoints.down('sm')]: {
+      marginTop: 10,
+      width: '90vw',
+      height: '90vh',
+      padding: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'center',
+      alignItems: 'space-evenly',
+    },
+    [theme.breakpoints.down('xs')]: {
       display: 'none'
     },
   },
   stepper:{
     backgroundColor: 'transparent',
+    [theme.breakpoints.down('sm')]: {
+      padding: 0,
+    },
   },
   stepButton:{
     '& .MuiStepButton-touchRipple':{
