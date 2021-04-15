@@ -2,7 +2,7 @@ import { Box, Container, IconButton, makeStyles, Typography } from "@material-ui
 import clsx from 'clsx'
 import RedoIcon from '@material-ui/icons/Redo';
 import tsbPreview from './tsbPreview.png'
-// import tsbGif from './tsbGif.gif'
+import tsbGif from './tsbgif.gif'
 import TSBstack from './TSBstack'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ComputerTwoToneIcon from '@material-ui/icons/ComputerTwoTone';
@@ -257,8 +257,8 @@ const TSBCard = () => {
                     classes.imgContainer)}>
                         <img src={tsbPreview} alt="The Sounding Board"
                             className={classes.cardImg} />
-                        {/* <img src={tsbGif} alt="The Sounding Board"
-                            className={classes.cardGif} /> */}
+                        <img src={tsbGif} alt="The Sounding Board"
+                            className={classes.cardGif} />
                     </Box>
                 </a>
                 <Box className={classes.stackBox}>
