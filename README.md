@@ -6,9 +6,5 @@ TYhe site includes all my contact information as well as a copy of my CV for dow
 
 Let me know if you have any questions (or find any bugs :beetle:)
 
-## Installation
-
-
-
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
