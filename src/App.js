@@ -1,6 +1,10 @@
 import {createMuiTheme, ThemeProvider} from '@material-ui/core';
 import Layout from './components/Layout';
 
+// ****************************************************
+// When adding a new project make 'card' and 'tablet' version:
+// Project cards subfolder + ProjectTabletComps subfolder
+
 
 const theme = createMuiTheme({
   palette: {
