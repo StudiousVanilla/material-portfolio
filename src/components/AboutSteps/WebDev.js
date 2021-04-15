@@ -49,6 +49,10 @@ const useStyles = makeStyles((theme)=>({
             height: 160,
             width: 160,
         },
+        // eslint-disable-next-line
+        ['@media (max-width:710px)']: {
+            backgroundColor: 'transparent',
+        },
     },
     gridItem:{
         display: 'flex',
@@ -72,7 +76,7 @@ const useStyles = makeStyles((theme)=>({
         height: '102%',
         [theme.breakpoints.down('md')]: {
             width: '105%',
-            height: '105',
+            height: '105%',
         },
     },
     tertiary:{

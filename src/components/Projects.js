@@ -16,8 +16,8 @@ const useStyles = makeStyles((theme) => ({
             width: '95vw',
             maxWidth: 980,
           },
-          // eslint-disable-next-line
-          ['@media (max-width:960px)']: {
+        // eslint-disable-next-line
+        ['@media (max-width:960px)']: {
             display: 'none'
         },
         marginTop: 5,

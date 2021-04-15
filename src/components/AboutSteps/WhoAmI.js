@@ -98,7 +98,7 @@ const WhoAmI = () => {
                         </Link> wasn't a good year to relocate.
                         <br/>
                         <br/>
-                        Unfortunalty, I was forced to return to Ireland. Having found myself with a lot of freetime, I decided to really work hard on what had been just a hobby up to then: <b>Learning to code</b>
+                        Unfortunately, I was forced to return to Ireland. Having found myself with a lot of freetime, I decided to work really hard on what had been just a hobby up to then: <b>Learning to code</b>
                     </Typography>
                 </Grid>
             </Grid>
