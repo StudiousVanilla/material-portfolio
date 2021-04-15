@@ -53,7 +53,7 @@ const ContactForm = () => {
         body: JSON.stringify(formData)
     };
     try {
-        const response = await fetch('http://localhost:3000/', requestOptions)
+        const response = await fetch('https://material-portfolio-mailer.herokuapp.com/', requestOptions)
 
         // response will be a success or error message
         const data = await response.json()
