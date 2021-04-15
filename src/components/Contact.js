@@ -147,7 +147,7 @@ const Contact = () => {
 
 
                     <Link target="_blank" rel="noopener noreferrer" 
-                    href={process.env.PUBLIC_URL/+'OByrneCV2021.pdf'} download="OByrneCV2021.pdf"
+                    href={process.env.PUBLIC_URL+'/OByrneCV2021.pdf'} download=""
                     className={classes.link}>
                         <Typography className={clsx(classes.typography, classes.pointer)} variant='h4'>
                             <DescriptionIcon 
