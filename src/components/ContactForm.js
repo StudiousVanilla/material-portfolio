@@ -9,6 +9,7 @@ import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight'
 
 const useStyles = makeStyles((theme)=>({
   container:{
+    position: 'relative',
     marginTop: 50
   },
   field: {
@@ -18,6 +19,11 @@ const useStyles = makeStyles((theme)=>({
     },
   button:{
     fontSize: '1.5rem'
+  },
+  formMessage:{
+    position: 'absolute',
+    bottom: -100,
+    width: 400
   }
 }))
 
@@ -29,12 +35,45 @@ const ContactForm = () => {
   const [details, setDetails] = useState('')
   const [titleError, setTitleError] = useState(false)
   const [detailsError, setDetailsError] = useState(false)
+  const [formMessage, setFormMessage] = useState('')
+
+
+  // sends a POST request to mail server using form data
+  const postMessage = async (formData) =>{
+
+    setFormMessage({message: 'Sending...'})
+
+    const requestOptions = {
+        method: 'POST',
+        headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        // parse formData into a JSON object
+        body: JSON.stringify(formData)
+    };
+    try {
+        const response = await fetch('http://localhost:3000/', requestOptions)
+
+        // response will be a success or error message
+        const data = await response.json()
+
+        // sets formMessage state to response (positive or negative)
+        setFormMessage(data)
+        
+    } catch (error) {
+        console.log(error);
+        // sets formMessage state due to error
+
+        setTimeout(()=>{
+            setFormMessage({message: "There was a probelm sending your message. Please refresh the page and try again"})}, 5000 )
+    }
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
     setTitleError(false)
     setDetailsError(false)
-
     if (title === '') {
       setTitleError(true)
     }
@@ -43,19 +82,21 @@ const ContactForm = () => {
     }
     if (title && details) {
 
-        console.log()
+      // grabs data from form and puts into formData object
+      const form = document.getElementById('contactForm')
+      let formData = {
+          name: form.name.value, 
+          email: form.email.value, 
+          details: form.details.value
+      }
 
-
-    //   fetch('http://localhost:8000/notes', {
-    //     method: 'POST',
-    //     headers: {"Content-type": "application/json"},
-    //     body: JSON.stringify({ title, details, category })
-    //   }).then(() => history.push('/'))
-
-
+      postMessage(formData)
 
     } 
   }
+
+
+
 
   return (
     <Container size="m" className={classes.container}>
@@ -67,7 +108,7 @@ const ContactForm = () => {
         Leave me a message
       </Typography>
       
-      <form noValidate autoComplete="off" onSubmit={handleSubmit} className={classes.form}>
+      <form noValidate autoComplete="off" onSubmit={handleSubmit} className={classes.form} id="contactForm">
         <TextField className={classes.field}
           onChange={(e) => setTitle(e.target.value)}
           label="Name" 
@@ -75,6 +116,7 @@ const ContactForm = () => {
           fullWidth
           required
           autoComplete='off'
+          name="name"
           error={titleError}
           // font size of input 
           />
@@ -84,6 +126,7 @@ const ContactForm = () => {
           variant="outlined"
           fullWidth
           required
+          name="email"
           error={titleError}
           />
         <TextField className={classes.field}
@@ -94,6 +137,7 @@ const ContactForm = () => {
           rows={4}
           fullWidth
           required
+          name="details"
           error={detailsError} 
           />
           
@@ -107,6 +151,16 @@ const ContactForm = () => {
             Submit
         </Button>
       </form>
+
+      <Typography
+      variant="h6" 
+      color="textSecondary"
+      component="h3"
+      gutterBottom
+      className={classes.formMessage}>
+        {formMessage.message}
+      </Typography>
+
 
       
     </Container>
