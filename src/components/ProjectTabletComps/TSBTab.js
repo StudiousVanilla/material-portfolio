@@ -1,7 +1,7 @@
 import { Box, makeStyles, Typography } from "@material-ui/core";
 import tsbLogo from '../AboutSteps/AboutStepsImgs/tsbLogo.svg'
 import tsb from '../ProjectCards/TSB/tsbPreview.png'
-// import tsbGif from '../ProjectCards/TSB/tsbGif.gif'
+import tsbGif from '../ProjectCards/TSB/tsbgif.gif'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ComputerTwoToneIcon from '@material-ui/icons/ComputerTwoTone';
 
@@ -112,7 +112,7 @@ const TSBTab = () => {
                 <Box className={classes.imgContainer}>
                     <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer" className={classes.link}>
                         <img src={tsb} alt="The Sounding Board Preview" className={classes.img}/>
-                        {/* <img src={tsbGif} alt="The Sounding Board Preview" className={classes.gif}/> */}
+                        <img src={tsbGif} alt="The Sounding Board Preview" className={classes.gif}/>
                     </a>
                 </Box>
             </Box>
