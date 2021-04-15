@@ -1,6 +1,7 @@
 import { Box, makeStyles, Typography } from "@material-ui/core";
 import tsbLogo from '../AboutSteps/AboutStepsImgs/tsbLogo.svg'
 import tsb from '../ProjectCards/TSB/tsbPreview.png'
+import tsbGif from '../ProjectCards/TSB/tsbGif.gif'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ComputerTwoToneIcon from '@material-ui/icons/ComputerTwoTone';
 
@@ -8,9 +9,11 @@ const useStyles = makeStyles((theme) => ({
 
     container:{
         width: '100%',
+        height: '60vh',
         display: 'flex',
+        marginBottom: 30,
+        padding: 20,
         flexDirection: 'column',
-        padding: 20
     },
     row:{
         display: 'flex',
@@ -30,13 +33,24 @@ const useStyles = makeStyles((theme) => ({
     imgContainer:{
         width: '60%',
         height: '100%',
+        '&:hover $img':{
+            display: 'none'
+        },
+        '&:hover $gif':{
+            display: 'block'
+        }
     },
     img:{
-         width: '100%'
+         width: '100%',
+    },
+    gif:{
+        width: '100%',
+        display: 'none',
+        boxShadow: '2px 2px 5px black'
     },
     details:{
         height: 350,
-        width: '40%',
+        width: '50%',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -53,6 +67,7 @@ const useStyles = makeStyles((theme) => ({
     },
     link:{
         color: '#fefefe',
+        textDecoration: 'none',
         '&:hover':{
             color: theme.palette.secondary.dark
         },
@@ -70,28 +85,35 @@ const TSBTab = () => {
                 <Box className={classes.logo}>
                     <img src={tsbLogo} alt="TSB Logo"  className={classes.img}/>
                 </Box>
-                <Typography className={classes.title} variant='h2'>
-                    The Sounding Board
-                </Typography>
+                <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer" className={classes.link}>
+                    <Typography className={classes.title} variant='h2'>
+                        The Sounding Board
+                    </Typography>
+                </a>
             </Box>
             <Box className={classes.row}>
                 <Box className={classes.details}>
-                    <Typography style={{paddingRight:10, marginBottom:20}}>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga amet, neque corrupti eligendi obcaecati accusantium maiores tenetur debitis tempore? Dolor sed saepe vero perspiciatis laboriosam fugiat debitis suscipit distinctio minima.
+                    <Typography variant='body2' style={{paddingRight:15, marginBottom:20}}>
+                        The Sounding Board (TSB) is a coaching and HR consultancy service offered by ICF accredited coach Mona Eames. I approached to help build the new TSB website as they were tranisitioning away from Squarespace. 
                         <br/><br/>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente libero dolor doloremque nihil mollitia incidunt odit eos, quisquam laboriosam possimus in.
+                        Tech stack:<br/> React - NodeJS/Express - Firebase - Heroku - Netlify
+                        <br/><br/>
+                        This web app uses a lightweight NodeJS/Express backend to fetch data  stored in Google Firebase.
                     </Typography>
                     <Box className={classes.linkContainer}>
-                        <a href="" className={classes.link}>
+                        <a href="https://github.com/StudiousVanilla/tsb/tree/master" target="_blank" rel="noreferrer" className={classes.link}>
                             <GitHubIcon style={{fontSize:40}}/>
                         </a>
-                        <a href="" className={classes.link}>
+                        <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer" className={classes.link}>
                             <ComputerTwoToneIcon style={{fontSize:40}}/>
                         </a>
                     </Box>
                 </Box>
                 <Box className={classes.imgContainer}>
-                    <img src={tsb} alt="The Sounding Board Preview" className={classes.img}/>
+                    <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer" className={classes.link}>
+                        <img src={tsb} alt="The Sounding Board Preview" className={classes.img}/>
+                        <img src={tsbGif} alt="The Sounding Board Preview" className={classes.gif}/>
+                    </a>
                 </Box>
             </Box>
         </Box>

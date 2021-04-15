@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
             flexDirection: 'row'
         },
         [theme.breakpoints.down('sm')]: {
-            width: '105%',
+            width: '100%',
         },
     },
     box: {
@@ -53,6 +53,17 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('md')]: {
             fontSize: 24
+        },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: 21
+        },
+        // eslint-disable-next-line
+        ['@media (max-width:960px)']: {
+            fontSize: '1.5em'
+        },
+        // eslint-disable-next-line
+        ['@media (max-width:780px)']: {
+            fontSize: '1.05em'
         },
     },
     typographyTop:{

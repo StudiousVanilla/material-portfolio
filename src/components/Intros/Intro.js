@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             display: 'flex'
         },
+        // eslint-disable-next-line
         ['@media (max-width:960px)']:{
 
         },
@@ -36,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
                 width: theme.spacing(32),
                 height: theme.spacing(36),
             },
+            // eslint-disable-next-line
             ['@media (max-width:960px)']: {
                 margin: theme.spacing(0),
                 width: theme.spacing(24),
@@ -71,6 +73,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.down('sm')]: {
             fontSize: '1.5rem',
         },
+        // eslint-disable-next-line
         ['@media (max-width:960px)']: {
             fontSize: '1.5rem'
         },
@@ -82,6 +85,7 @@ const useStyles = makeStyles((theme) => ({
            display: 'flex',
            fontSize: '1rem'
         },
+        // eslint-disable-next-line
         ['@media (max-width:960px)']:{
             display: 'none'
         }
