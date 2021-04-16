@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     container:{
         width: '100%',
         height: '60vh',
+        minHeight: 500,
         display: 'flex',
         marginBottom: 30,
         padding: 20,

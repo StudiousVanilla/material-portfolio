@@ -5,6 +5,7 @@ const useStyles = makeStyles((theme) => ({
 
     container:{
         height: '70vh',
+        minHeight: 500,
         width: '105vw',
         marginLeft: -50
     }

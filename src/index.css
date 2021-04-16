@@ -57,38 +57,48 @@ button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
 
 @media only screen and (max-width: 1200px) {
   .rec.rec-arrow {
-    font-size: 1em;
+    color: '#fefefe';
+    font-size: 1.5em;
     border: none;
     background-color:transparent;
+    box-shadow: none;
   }
 
   .rec.rec-arrow:focus:enabled, .rec.rec-arrow:hover:enabled{
+    color: #74ff0391;
+    font-size: 2em;
     border: none;
     background-color: transparent;
+    box-shadow: none;
   }
 
   .rec.rec-arrow:disabled{
     color: rgba(255, 255, 255, 0.123);
     background-color: transparent;
+    border: none;
+    box-shadow: none;
   }
 
   .sc-bdvvaa{
     display: 'none';
-    width: 0px;
-    max-width: 10px;
-    max-height: 10px;
-    min-width: none;
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    border: none;
+    box-shadow: none;
   }
 
   .bSWeAW, .hSiCVM{
     display: 'none';
-    width: 0px;
-    height: 0px;
-    max-width: 0px;
-    max-height: 0px;
-    max-width: 0px;
-    max-height: 0px;
-    min-width: none;
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    border: none;
+    box-shadow: none;
   }
 
 }
