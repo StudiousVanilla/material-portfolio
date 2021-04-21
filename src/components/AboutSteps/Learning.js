@@ -141,7 +141,7 @@ const Learning = () => {
                         <br/>
                         <br/>
                         A curated collection of articles, videos, courses and projects which covers everything you need to know to be a Web Developer. It's self-taught, self-motivated and exactly what I was looking for.
-                        I started the course in May 2020, finished it in Januray 2021.
+                        I started the course in May 2020, finished it in January 2021.
                     </Typography>
                 </Grid>
                 <Grid item xs ={2} s={2} m={2} lg={2} className={classes.odinGrid}>

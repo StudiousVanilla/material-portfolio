@@ -223,7 +223,7 @@ const TSBCard = () => {
                     </Typography>
                 </a>
                 <Typography className={classes.projectText}>
-                        The Sounding Board (TSB) is a coaching and HR consultancy service offered by ICF accredited coach Mona Eames. I approached to help build the new TSB website as they were tranisitioning away from Squarespace. 
+                        The Sounding Board (TSB) is a coaching and HR consultancy service offered by ICF accredited coach Mona Eames. I was approached to help build the new TSB website as they were tranisitioning away from Squarespace. 
                         <br /><br />
                         Tech stack:<br/> React - NodeJS/Express - Firebase - Heroku - Netlify
                         <br /><br />
