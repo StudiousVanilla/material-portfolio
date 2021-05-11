@@ -3,6 +3,7 @@ import Container from '@material-ui/core/Container';
 import Card from '@material-ui/core/Card';
 import Carousel from 'react-elastic-carousel';
 import TSBCard from './ProjectCards/TSB/TSBCard';
+import LOTRCard from './ProjectCards/LOTR/LOTRCard';
 import MiscCard from './ProjectCards/Misc/MiscCard';
 
 const useStyles = makeStyles((theme) => ({
@@ -76,6 +77,11 @@ const Projects = () => {
                     <div className={classes.carouselItems}>
                         <Card className={classes.card}>
                             <TSBCard/>
+                        </Card>
+                    </div>
+                    <div className={classes.carouselItems}>
+                        <Card className={classes.card}>
+                            <LOTRCard/>
                         </Card>
                     </div>
                     <div className={classes.carouselItems}>
