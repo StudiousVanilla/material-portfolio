@@ -58,21 +58,21 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     projectText:{
-        fontSize: '1.05rem',
+        fontSize: '1rem',
         display: 'flex',
         flexDirection:'column',
         [theme.breakpoints.up('sm')]: {
-            fontSize: '0.9rem',
+            fontSize: '0.75rem',
         },
         [theme.breakpoints.up('md')]: {
-            fontSize: '0.98rem',
+            fontSize: '0.85rem',
             flexDirection:'column',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '1.06rem',
+            fontSize: '1rem',
         },
         [theme.breakpoints.up('xl')]: {
-            fontSize: '1.2rem',
+            fontSize: '1.1rem',
         },
     },
     projectTextUnderWrap:{

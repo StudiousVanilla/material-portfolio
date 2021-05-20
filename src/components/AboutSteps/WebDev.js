@@ -27,14 +27,14 @@ const useStyles = makeStyles((theme)=>({
     typography:{
         padding: 22,
         marginBottom: 0,
-        fontSize: '1.4em',
+        fontSize: '1.1em',
         [theme.breakpoints.down('md')]: {
             padding: 35,
-            fontSize: '1.3em'
+            fontSize: '1em'
         },  
         [theme.breakpoints.down('sm')]: {
             padding: 25,
-            fontSize: '1.1em'
+            fontSize: '0.9em'
         },  
     },
     tsbContainer:{

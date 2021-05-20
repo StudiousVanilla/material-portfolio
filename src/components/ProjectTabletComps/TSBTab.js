@@ -59,7 +59,10 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'space-between',
-        fontSize: '1rem',
+        fontSize: '0.5rem',
+    },
+    tabText:{
+        fontSize: '0.68rem',
     },
     linkContainer:{
         width: '60%',
@@ -97,7 +100,7 @@ const TSBTab = () => {
             </Box>
             <Box className={classes.row}>
                 <Box className={classes.details}>
-                    <Typography variant='body2' style={{paddingRight:15, marginBottom:20}}>
+                    <Typography className={classes.tabText} style={{paddingRight:15, marginBottom:20}}>
                         The Sounding Board (TSB) is a coaching and HR consultancy service offered by ICF accredited coach Mona Eames. I approached to help build the new TSB website as they were tranisitioning away from Squarespace. 
                         <br/><br/>
                         Tech stack:<br/> React - NodeJS/Express - Firebase - Heroku - Netlify

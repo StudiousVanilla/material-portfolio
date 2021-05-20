@@ -61,6 +61,9 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-between',
         fontSize: '1rem',
     },
+    tabText:{
+        fontSize: '0.68rem',
+    },
     linkContainer:{
         width: '60%',
         paddingTop: 20,
@@ -97,7 +100,7 @@ const TSBTab = () => {
             </Box>
             <Box className={classes.row}>
                 <Box className={classes.details}>
-                    <Typography variant='body2' style={{paddingRight:15, marginBottom:20}}>
+                    <Typography className={classes.tabText} style={{paddingRight:15, marginBottom:20}}>
                         I built this project to get some more practice using API's and data fetching. It's a 'Lord of the Rings' quote generator 
                         <br/><br/>
                         Tech stack:<br/> React - NodeJS/Express - Heroku - Netlify
