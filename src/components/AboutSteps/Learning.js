@@ -31,17 +31,17 @@ const useStyles = makeStyles((theme)=>({
     typography:{
         padding: '0px 45px 0px 45px',
         marginBottom: 40,
-        fontSize: '1.1em',
+        fontSize: '1.2em',
         [theme.breakpoints.down('md')]: {
             marginBottom: 0,
             padding: '0px 50px 0px 50px',
-            fontSize: '1.1em'
+            fontSize: '1.2em'
         },
         [theme.breakpoints.down('sm')]: {
             padding: 25,
             marginBottom: 2,
             marginTop: 2,
-            fontSize: '0.95em'
+            fontSize: '1em'
         },
     },
     typographyFinal:{

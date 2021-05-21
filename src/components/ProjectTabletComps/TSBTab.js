@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '0.5rem',
     },
     tabText:{
-        fontSize: '0.68rem',
+        fontSize: '0.825rem',
     },
     linkContainer:{
         width: '60%',

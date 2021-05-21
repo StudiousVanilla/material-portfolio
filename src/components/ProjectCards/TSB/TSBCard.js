@@ -61,17 +61,17 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection:'column',
         [theme.breakpoints.up('sm')]: {
-            fontSize: '0.75rem',
+            fontSize: '0.95rem',
         },
         [theme.breakpoints.up('md')]: {
-            fontSize: '0.85rem',
+            fontSize: '1.075rem',
             flexDirection:'column',
         },
         [theme.breakpoints.up('lg')]: {
-            fontSize: '1rem',
+            fontSize: '1.1rem',
         },
         [theme.breakpoints.up('xl')]: {
-            fontSize: '1.1rem',
+            fontSize: '1.25rem',
         },
     },
     projectTextUnderWrap:{

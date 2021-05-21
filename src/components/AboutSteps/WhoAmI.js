@@ -23,12 +23,12 @@ const useStyles = makeStyles((theme)=>({
     },
     typography:{
         padding: '10px 20px 10px 20px',
-        fontSize: '1em',
+        fontSize: '1.2em',
         [theme.breakpoints.down('md')]: {
-            fontSize: '0.9em'
+            fontSize: '1.15em'
         },
         [theme.breakpoints.down('sm')]: {
-            fontSize: '0.95em'
+            fontSize: '1em'
         }
     },
     imgContainer:{

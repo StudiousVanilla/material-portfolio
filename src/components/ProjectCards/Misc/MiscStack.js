@@ -22,11 +22,15 @@ const useStlyes = makeStyles((theme)=>({
         height: '100%',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
       },
       grid: {
         width: '100%',
         height: '100%',
+        [theme.breakpoints.down('sm')]: {
+            width: '120%',
+            marginLeft: 40,
+        }
       },
       gridItem:{
         height: '100%',
