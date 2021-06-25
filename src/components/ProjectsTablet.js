@@ -1,4 +1,5 @@
 import { Container, Divider, makeStyles } from "@material-ui/core";
+import DrinkMXRTab from './ProjectTabletComps/DrinkMXRTab'
 import TSBTab from './ProjectTabletComps/TSBTab'
 import LOTRTab from './ProjectTabletComps/LOTRTab'
 import MiscTab from './ProjectTabletComps/MiscTab'
@@ -30,6 +31,8 @@ const ProjectTablet = () => {
 
     return ( 
         <Container className={classes.container}>
+            <DrinkMXRTab/>
+            <Divider dark />
             <TSBTab/>
             <Divider dark />
             <LOTRTab/>
