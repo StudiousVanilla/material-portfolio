@@ -5,6 +5,7 @@ import Carousel from 'react-elastic-carousel';
 import DrinkMXRCard from './ProjectCards/DrinkMXR/DrinkMXRCard';
 import TSBCard from './ProjectCards/TSB/TSBCard';
 import LOTRCard from './ProjectCards/LOTR/LOTRCard';
+import XAMSCard from './ProjectCards/XMAS/XMASCard';
 import MiscCard from './ProjectCards/Misc/MiscCard';
 
 const useStyles = makeStyles((theme) => ({
@@ -75,6 +76,11 @@ const Projects = () => {
         <Container className={classes.container}>
             <Box className={classes.box}>
                 <Carousel>
+                    {/* <div className={classes.carouselItems}>
+                        <Card className={classes.card}>
+                            <XAMSCard/>
+                        </Card>
+                    </div> */}
                     <div className={classes.carouselItems}>
                         <Card className={classes.card}>
                             <DrinkMXRCard/>
