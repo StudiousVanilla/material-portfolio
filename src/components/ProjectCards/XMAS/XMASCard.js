@@ -1,9 +1,9 @@
 import { Box, Container, IconButton, makeStyles, Typography } from "@material-ui/core";
 import clsx from 'clsx'
 import RedoIcon from '@material-ui/icons/Redo';
-import tsbPreview from './tsbPreview.png'
-import tsbGif from './tsbgif.gif'
-import TSBstack from './TSBstack'
+import XMAS from './XMASPreview.png'
+import XMASGif from './XMASgif.gif'
+import XMASstack from './XMASstack'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ComputerTwoToneIcon from '@material-ui/icons/ComputerTwoTone';
 
@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
         '&:hover':{
             color: theme.palette.secondary.dark,
         }
+    },
+    linkText:{
+        color: theme.palette.secondary.dark
     },
     boxRight: {
         position: 'relative',
@@ -208,30 +211,28 @@ const useStyles = makeStyles((theme) => ({
     }, 
 }));
 
-const TSBCard = () => {
+const XMASCard = () => {
 
     const classes = useStyles();
 
     return (
         <Container className={classes.container}>
             <Box className={classes.box}>
-                <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer" className={classes.link}>
+                <a href="https://www.drinkmxr.com/" target="_blank" rel="noreferrer" className={classes.link}>
                     <Typography
                         variant='h1'
                         className={clsx(classes.boxItem, classes.title)}>
-                        The Sounding Board
+                        Xmas TimeMachine
                     </Typography>
                 </a>
                 <Typography className={classes.projectText}>
-                        The Sounding Board (TSB) is a coaching and HR consultancy service offered by ICF accredited coach Mona Eames. I was approached to help build the new TSB website as they were tranisitioning away from Squarespace. 
+                        Irihs Xmas Time Machine is a web app to look back over the greatest Christmas advertisements on Irish TV. 
                         <br /><br />
-                        Tech stack:<br/> React - NodeJS/Express - Firebase - Heroku - Netlify
+                        Tech stack:<br/> React - Tailwind CSS - Netlify
                         <br /><br />
-                        This web application uses a lightweight NodeJS/Express backend to fetch data (blog posts, contact form) stored in Google Firebase. These calls are secured using a combination of HTTPS, CORS and Google API restrictions.
+                        This web application uses React and Tailwind CSS to show display embedded videos, based on the year value in the URL query string
                         <br /><br />
-                        I worked with a professional designer for this project, implementing their design spec using my own custom CSS.
-                        <br /><br />
-                        I also built a custom CMS so that the client could write, edit, publish, and delete blog posts from a seperate web app, secured with an additional layer of firebase authentication.
+                        The app is designed exclusively for mobile, it will appear broken on desktop.
                         <br /><br /> 
                 </Typography>
             </Box>
@@ -242,25 +243,25 @@ const TSBCard = () => {
                     </Typography>
                     <RedoIcon className={classes.hoverArrow}/>
                 </Box>
-                <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer">
+                <a href="https://www.irishxmastimemachine.com/" target="_blank" rel="noreferrer">
                     <Box className={clsx(classes.boxItem, 
                     classes.imgContainer)}>
-                        <img src={tsbPreview} alt="The Sounding Board"
+                        <img src={XMAS} alt="The Sounding Board"
                             className={classes.cardImg} />
-                        <img src={tsbGif} alt="The Sounding Board"
+                        <img src={XMASGif} alt="The Sounding Board"
                             className={classes.cardGif} />
                     </Box>
                 </a>
                 <Box className={classes.stackBox}>
-                    <TSBstack />
+                    <XMASstack />
                 </Box>
                 <Box className={clsx(classes.boxItem, classes.linksBox)}>
-                    <a href="https://github.com/StudiousVanilla/tsb/tree/master" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/StudiousVanilla/digital-card" target="_blank" rel="noreferrer">
                         <IconButton className={classes.iconBtn}>
                             <GitHubIcon className={classes.linkIcons} />
                         </IconButton>
                     </a>
-                    <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer">
+                    <a href="https://www.irishxmastimemachine.com/" target="_blank" rel="noreferrer">
                         <IconButton className={classes.iconBtn}>
                             <ComputerTwoToneIcon className={classes.linkIcons}/>
                         </IconButton>
@@ -271,4 +272,4 @@ const TSBCard = () => {
     );
 }
 
-export default TSBCard;
+export default XMASCard;

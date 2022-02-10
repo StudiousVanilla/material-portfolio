@@ -1,9 +1,9 @@
 import { Box, Container, IconButton, makeStyles, Typography } from "@material-ui/core";
 import clsx from 'clsx'
 import RedoIcon from '@material-ui/icons/Redo';
-import tsbPreview from './tsbPreview.png'
-import tsbGif from './tsbgif.gif'
-import TSBstack from './TSBstack'
+import DrinkMXR from './DrinkMXRPreview.png'
+import DrinkMXRGif from './DrinkMXRgif.gif'
+import DrinkMXRstack from './DrinkMXRstack'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ComputerTwoToneIcon from '@material-ui/icons/ComputerTwoTone';
 
@@ -31,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
         '&:hover':{
             color: theme.palette.secondary.dark,
         }
+    },
+    linkText:{
+        color: theme.palette.secondary.dark
     },
     boxRight: {
         position: 'relative',
@@ -208,30 +211,33 @@ const useStyles = makeStyles((theme) => ({
     }, 
 }));
 
-const TSBCard = () => {
+const DrinkMXRCard = () => {
 
     const classes = useStyles();
 
     return (
         <Container className={classes.container}>
             <Box className={classes.box}>
-                <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer" className={classes.link}>
+                <a href="https://www.drinkmxr.com/" target="_blank" rel="noreferrer" className={classes.link}>
                     <Typography
                         variant='h1'
                         className={clsx(classes.boxItem, classes.title)}>
-                        The Sounding Board
+                        DrinkMXR
                     </Typography>
                 </a>
                 <Typography className={classes.projectText}>
-                        The Sounding Board (TSB) is a coaching and HR consultancy service offered by ICF accredited coach Mona Eames. I was approached to help build the new TSB website as they were tranisitioning away from Squarespace. 
+                        DrinkMXR is a wesite to help you find the perfect drink. Select your ingredients and see all the different cocktails you could make. 
                         <br /><br />
-                        Tech stack:<br/> React - NodeJS/Express - Firebase - Heroku - Netlify
+                        Tech stack:<br/> NodeJS/Express - GraphQL - Heroku - React - Tailwind CSS - Netlify
                         <br /><br />
-                        This web application uses a lightweight NodeJS/Express backend to fetch data (blog posts, contact form) stored in Google Firebase. These calls are secured using a combination of HTTPS, CORS and Google API restrictions.
+                        This web application uses Node/Express with GraphQL to organise and serve the backend data. The frontend is a Netlify hosted app, that uses React to fetch the backend data and is styled using Tailwind CSS. 
                         <br /><br />
-                        I worked with a professional designer for this project, implementing their design spec using my own custom CSS.
+                        The app is designed primarily for mobile, although it is optimisied for desktop.
                         <br /><br />
-                        I also built a custom CMS so that the client could write, edit, publish, and delete blog posts from a seperate web app, secured with an additional layer of firebase authentication.
+                        The API for this application: <span><a href="https://www.thecocktaildb.com/api.php" className={clsx(classes.link, classes.linkText)}>The Coctail API</a></span>
+                        <br/>
+                        Backend is in the same Heroku hosted app as my LOTR project to save on personal costs.
+                        You can see get the back end repo here: <a href="https://github.com/StudiousVanilla/api_practice_backend" className={clsx(classes.link, classes.linkText)}>Backend Repo</a>
                         <br /><br /> 
                 </Typography>
             </Box>
@@ -242,25 +248,25 @@ const TSBCard = () => {
                     </Typography>
                     <RedoIcon className={classes.hoverArrow}/>
                 </Box>
-                <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer">
+                <a href="https://www.drinkmxr.com/" target="_blank" rel="noreferrer">
                     <Box className={clsx(classes.boxItem, 
                     classes.imgContainer)}>
-                        <img src={tsbPreview} alt="The Sounding Board"
+                        <img src={DrinkMXR} alt="The Sounding Board"
                             className={classes.cardImg} />
-                        <img src={tsbGif} alt="The Sounding Board"
+                        <img src={DrinkMXRGif} alt="The Sounding Board"
                             className={classes.cardGif} />
                     </Box>
                 </a>
                 <Box className={classes.stackBox}>
-                    <TSBstack />
+                    <DrinkMXRstack />
                 </Box>
                 <Box className={clsx(classes.boxItem, classes.linksBox)}>
-                    <a href="https://github.com/StudiousVanilla/tsb/tree/master" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/StudiousVanilla/drinkmxr" target="_blank" rel="noreferrer">
                         <IconButton className={classes.iconBtn}>
                             <GitHubIcon className={classes.linkIcons} />
                         </IconButton>
                     </a>
-                    <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer">
+                    <a href="https://www.drinkmxr.com/" target="_blank" rel="noreferrer">
                         <IconButton className={classes.iconBtn}>
                             <ComputerTwoToneIcon className={classes.linkIcons}/>
                         </IconButton>
@@ -271,4 +277,4 @@ const TSBCard = () => {
     );
 }
 
-export default TSBCard;
+export default DrinkMXRCard;

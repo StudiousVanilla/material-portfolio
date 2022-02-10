@@ -31,16 +31,17 @@ const useStyles = makeStyles((theme)=>({
     typography:{
         padding: '0px 45px 0px 45px',
         marginBottom: 40,
-        fontSize: '1.4em',
+        fontSize: '1.2em',
         [theme.breakpoints.down('md')]: {
             marginBottom: 0,
             padding: '0px 50px 0px 50px',
-            fontSize: '1.22em'
+            fontSize: '1.2em'
         },
         [theme.breakpoints.down('sm')]: {
             padding: 25,
             marginBottom: 2,
-            marginTop: 2
+            marginTop: 2,
+            fontSize: '1em'
         },
     },
     typographyFinal:{
@@ -141,7 +142,7 @@ const Learning = () => {
                         <br/>
                         <br/>
                         A curated collection of articles, videos, courses and projects which covers everything you need to know to be a Web Developer. It's self-taught, self-motivated and exactly what I was looking for.
-                        I started the course in May 2020, finished it in Januray 2021.
+                        I started the course in May 2020, finished it in January 2021.
                     </Typography>
                 </Grid>
                 <Grid item xs ={2} s={2} m={2} lg={2} className={classes.odinGrid}>

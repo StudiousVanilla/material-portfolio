@@ -65,7 +65,7 @@ button.rec-dot:hover, button.rec-dot:active, button.rec-dot:focus  {
   }
   
   .rec.rec-arrow:focus:enabled, .rec.rec-arrow:hover:enabled{
-    color: green;
+    color: #74ff0391;
     font-size: 2em;
     border: none;
     background-color: transparent;

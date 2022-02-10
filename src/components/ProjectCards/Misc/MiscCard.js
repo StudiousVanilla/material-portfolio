@@ -12,9 +12,10 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         justifyContent: 'center',
         [theme.breakpoints.up('mlg')]: {
-            flexDirection: 'row'
+            flexDirection: 'row',
+            width: '100%',
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down('xs')]: {
             width: '100%',
         },
     },
@@ -33,8 +34,8 @@ const useStyles = makeStyles((theme) => ({
         zIndex: 1,
         color: '#fff',
         [theme.breakpoints.down('sm')]: {
-            width: '110%',
-        },
+            width: '120%',
+        }
       },
     typographyContainer:{
         position: 'absolute',
@@ -59,15 +60,15 @@ const useStyles = makeStyles((theme) => ({
         },
         // eslint-disable-next-line
         ['@media (max-width:960px)']: {
-            fontSize: '1.5em'
+            fontSize: '1.32em'
         },
         // eslint-disable-next-line
-        ['@media (max-width:780px)']: {
-            fontSize: '1.05em'
+        ['@media (max-width:700px)']: {
+            fontSize: '1.08em'
         },
     },
     typographyTop:{
-        paddingTop: 70,
+        paddingTop: 75,
         
     },
     icon:{

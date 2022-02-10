@@ -1,7 +1,7 @@
 import { Box, makeStyles, Typography } from "@material-ui/core";
-import tsbLogo from '../AboutSteps/AboutStepsImgs/tsbLogo.svg'
-import tsb from '../ProjectCards/TSB/tsbPreview.png'
-import tsbGif from '../ProjectCards/TSB/tsbgif.gif'
+import DrinkMXLogo from './tabLogos/DrinkMXRLogo.svg'
+import DrinkMXR from '../ProjectCards/DrinkMXR/DrinkMXRPreview.png'
+import DrinkMXRGif from '../ProjectCards/DrinkMXR/DrinkMXRgif.gif'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ComputerTwoToneIcon from '@material-ui/icons/ComputerTwoTone';
 
@@ -12,17 +12,12 @@ const useStyles = makeStyles((theme) => ({
         height: '60vh',
         minHeight: 500,
         display: 'flex',
-<<<<<<< HEAD
-        marginBottom: 50,
-        padding: 20,
-=======
         paddingTop: 20,
         paddingBottom: 80,
         paddingLeft: 40,
         paddingRight: 40,
->>>>>>> 6def1bbbb2e3f19b4b3b792a71679da55a2b739d
         flexDirection: 'column',
-        backgroundColor: '#424242'
+        backgroundColor: '#363636'
     },
     row:{
         display: 'flex',
@@ -34,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
         width: 60,
         marginRight: 20,
         borderRadius: 100,
-        backgroundColor: '#0D274F',
+        backgroundColor: 'transparent',
     },
     title:{
         borderBottom: `1px dotted ${theme.palette.secondary.main}`
@@ -64,10 +59,10 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'space-between',
-        fontSize: '0.5rem',
+        fontSize: '1rem',
     },
     tabText:{
-        fontSize: '0.825rem',
+        fontSize: '0.8rem',
     },
     linkContainer:{
         width: '60%',
@@ -86,8 +81,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-
-const TSBTab = () => {
+const DrinkMXRTab = () => {
 
     const classes = useStyles()
 
@@ -95,36 +89,36 @@ const TSBTab = () => {
         <Box className={classes.container}>
             <Box className={classes.row} style={{marginBottom: 40}}>
                 <Box className={classes.logo}>
-                    <img src={tsbLogo} alt="TSB Logo"  className={classes.img}/>
+                    <img src={DrinkMXLogo} alt="DrinkMXR Logo"  className={classes.img}/>
                 </Box>
-                <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer" className={classes.link}>
+                <a href="https://www.drinkmxr.com/" target="_blank" rel="noreferrer" className={classes.link}>
                     <Typography className={classes.title} variant='h2'>
-                        The Sounding Board
+                        DrinkMXR
                     </Typography>
                 </a>
             </Box>
             <Box className={classes.row}>
                 <Box className={classes.details}>
                     <Typography className={classes.tabText} style={{paddingRight:15, marginBottom:20}}>
-                        The Sounding Board (TSB) is a coaching and HR consultancy service offered by ICF accredited coach Mona Eames. I approached to help build the new TSB website as they were tranisitioning away from Squarespace. 
+                    DrinkMXR is a wesite to help you find the perfect drink. Select your ingredients and see all the different cocktails you could make.  
                         <br/><br/>
-                        Tech stack:<br/> React - NodeJS/Express - Firebase - Heroku - Netlify
+                        Tech stack:<br/> NodeJS/Express - GraphQL - Heroku - React - Tailwind CSS - Netlify
                         <br/><br/>
-                        This web app uses a lightweight NodeJS/Express backend to fetch data  stored in Google Firebase.
+                        This web application uses Node/Express with GraphQL to serve the backend data. The frontend is a Reactapp that fetches the backend data, styled using Tailwind CSS and hosted on Netlify.
                     </Typography>
                     <Box className={classes.linkContainer}>
-                        <a href="https://github.com/StudiousVanilla/tsb/tree/master" target="_blank" rel="noreferrer" className={classes.link}>
+                        <a href="https://github.com/StudiousVanilla/drinkmxr" target="_blank" rel="noreferrer" className={classes.link}>
                             <GitHubIcon style={{fontSize:40}}/>
                         </a>
-                        <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer" className={classes.link}>
+                        <a href="https://www.drinkmxr.com/" target="_blank" rel="noreferrer" className={classes.link}>
                             <ComputerTwoToneIcon style={{fontSize:40}}/>
                         </a>
                     </Box>
                 </Box>
                 <Box className={classes.imgContainer}>
-                    <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer" className={classes.link}>
-                        <img src={tsb} alt="The Sounding Board Preview" className={classes.img}/>
-                        <img src={tsbGif} alt="The Sounding Board Preview" className={classes.gif}/>
+                    <a href="https://www.drinkmxr.com/" target="_blank" rel="noreferrer" className={classes.link}>
+                        <img src={DrinkMXR} alt="The Sounding Board Preview" className={classes.img}/>
+                        <img src={DrinkMXRGif} alt="The Sounding Board Preview" className={classes.gif}/>
                     </a>
                 </Box>
             </Box>
@@ -132,4 +126,4 @@ const TSBTab = () => {
      );
 }
  
-export default TSBTab;
+export default DrinkMXRTab;

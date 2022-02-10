@@ -1,9 +1,9 @@
 import { Box, Container, IconButton, makeStyles, Typography } from "@material-ui/core";
 import clsx from 'clsx'
 import RedoIcon from '@material-ui/icons/Redo';
-import tsbPreview from './tsbPreview.png'
-import tsbGif from './tsbgif.gif'
-import TSBstack from './TSBstack'
+import LOTRPreview from './LOTRPreview.png'
+import LOTRGif from './LOTRgif.gif'
+import LOTRstack from './LOTRstack'
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ComputerTwoToneIcon from '@material-ui/icons/ComputerTwoTone';
 
@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     link:{
         color: '#fefefe',
         textDecoration: 'none',
+        whiteSpace: 'nowrap',
         '&:hover':{
             color: theme.palette.secondary.dark,
         }
@@ -100,7 +101,7 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('mlg')]: {
             position: 'absolute',
             top: 40,
-            right: 20,
+            right: 30,
             margin: 0,
             padding: 0,
             display: 'flex',
@@ -208,31 +209,34 @@ const useStyles = makeStyles((theme) => ({
     }, 
 }));
 
-const TSBCard = () => {
+const LOTRCard = () => {
 
     const classes = useStyles();
 
     return (
         <Container className={classes.container}>
             <Box className={classes.box}>
-                <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer" className={classes.link}>
+                <a href="https://hungry-goodall-28f444.netlify.app/" target="_blank" rel="noreferrer" className={classes.link}>
                     <Typography
                         variant='h1'
                         className={clsx(classes.boxItem, classes.title)}>
-                        The Sounding Board
+                        LOTR Quotes
                     </Typography>
                 </a>
                 <Typography className={classes.projectText}>
-                        The Sounding Board (TSB) is a coaching and HR consultancy service offered by ICF accredited coach Mona Eames. I was approached to help build the new TSB website as they were tranisitioning away from Squarespace. 
+                        I built this project to get some more practice using API's and data fetching. It's a 'Lord of the Rings' quote generator where you can click to reveal the character
                         <br /><br />
-                        Tech stack:<br/> React - NodeJS/Express - Firebase - Heroku - Netlify
+                        Tech stack:<br/> React - NodeJS/Express - Heroku - Netlify
                         <br /><br />
-                        This web application uses a lightweight NodeJS/Express backend to fetch data (blog posts, contact form) stored in Google Firebase. These calls are secured using a combination of HTTPS, CORS and Google API restrictions.
+                        This web application uses a lightweight NodeJS/Express backend to fetch data (quotes) from 'The One API':
+                        <a href="https://the-one-api.dev/" className={classes.link}>https://the-one-api.dev/</a>
+                        <br/>
+                        These calls are secured using a combination of HTTPS, CORS and a Bearer token sent with API requests
                         <br /><br />
-                        I worked with a professional designer for this project, implementing their design spec using my own custom CSS.
-                        <br /><br />
-                        I also built a custom CMS so that the client could write, edit, publish, and delete blog posts from a seperate web app, secured with an additional layer of firebase authentication.
+                        This was also my first project to employ SASS styling and functionality
                         <br /><br /> 
+                        Details about the art work, icons, images and fonts used in ths project can be found in the Github README
+                        <br /><br />
                 </Typography>
             </Box>
             <Box className={clsx(classes.box, classes.boxRight)}>
@@ -242,25 +246,25 @@ const TSBCard = () => {
                     </Typography>
                     <RedoIcon className={classes.hoverArrow}/>
                 </Box>
-                <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer">
+                <a href="https://hungry-goodall-28f444.netlify.app/" target="_blank" rel="noreferrer">
                     <Box className={clsx(classes.boxItem, 
                     classes.imgContainer)}>
-                        <img src={tsbPreview} alt="The Sounding Board"
+                        <img src={LOTRPreview} alt="LOTR Preview"
                             className={classes.cardImg} />
-                        <img src={tsbGif} alt="The Sounding Board"
+                        <img src={LOTRGif} alt="LOTR Preview"
                             className={classes.cardGif} />
                     </Box>
                 </a>
                 <Box className={classes.stackBox}>
-                    <TSBstack />
+                    <LOTRstack />
                 </Box>
                 <Box className={clsx(classes.boxItem, classes.linksBox)}>
-                    <a href="https://github.com/StudiousVanilla/tsb/tree/master" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/StudiousVanilla/api_practice_frontend" target="_blank" rel="noreferrer">
                         <IconButton className={classes.iconBtn}>
                             <GitHubIcon className={classes.linkIcons} />
                         </IconButton>
                     </a>
-                    <a href="https://tsbcoaching.ie/tsb" target="_blank" rel="noreferrer">
+                    <a href="https://hungry-goodall-28f444.netlify.app/" target="_blank" rel="noreferrer">
                         <IconButton className={classes.iconBtn}>
                             <ComputerTwoToneIcon className={classes.linkIcons}/>
                         </IconButton>
@@ -271,4 +275,4 @@ const TSBCard = () => {
     );
 }
 
-export default TSBCard;
+export default LOTRCard;
