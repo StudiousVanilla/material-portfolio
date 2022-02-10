@@ -10,8 +10,9 @@ const useStyles = makeStyles((theme) => ({
     container:{
         width: '100%',
         height: '60vh',
+        minHeight: 500,
         display: 'flex',
-        marginBottom: 30,
+        marginBottom: 50,
         padding: 20,
         flexDirection: 'column',
     },

@@ -1,8 +1,8 @@
 import clsx from 'clsx'
 import { Box, Container, Grid, Link, makeStyles, Typography } from "@material-ui/core";
 import learningPython from './AboutStepsImgs/learningPython.png'
-import learningDCU from './AboutStepsImgs/learningDCU.png'
-import learningTOP from './AboutStepsImgs/learningTOP.svg'
+import learningDCU from '../../gandalf.svg'
+import learningTOP from '../../gandalf.svg'
 
 const useStyles = makeStyles((theme)=>({
     container:{
