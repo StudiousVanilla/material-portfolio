@@ -12,15 +12,10 @@ const useStyles = makeStyles((theme) => ({
         height: '60vh',
         minHeight: 500,
         display: 'flex',
-<<<<<<< HEAD
-        marginBottom: 50,
-        padding: 20,
-=======
         paddingTop: 20,
         paddingBottom: 80,
         paddingLeft: 40,
         paddingRight: 40,
->>>>>>> 6def1bbbb2e3f19b4b3b792a71679da55a2b739d
         flexDirection: 'column',
         backgroundColor: '#424242'
     },
